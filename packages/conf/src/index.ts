@@ -47,6 +47,7 @@ export type LinguiConfig = {
   rootDir: string
   runtimeConfigModule: ModuleSource | { [symbolName: string]: ModuleSource }
   sourceLocale: string
+  apiKey: string
 }
 
 // Enforce posix path delimiters internally
@@ -84,6 +85,7 @@ export const defaultConfig: LinguiConfig = {
   rootDir: ".",
   runtimeConfigModule: ["@lingui/core", "i18n"],
   sourceLocale: "",
+  apiKey: ""
 }
 
 function configExists(path) {

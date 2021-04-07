@@ -8,6 +8,7 @@ import { AllCatalogsType, getCatalogs } from "./api/catalog"
 import { printStats } from "./api/stats"
 import { detect } from "./api/detect"
 import { helpRun } from "./api/help"
+import { sync } from "./api/sync"
 
 export type CliExtractOptions = {
   verbose: boolean
@@ -64,7 +65,27 @@ export default function command(
       `(use "${chalk.yellow(
         helpRun("compile")
       )}" to compile catalogs for production)`
-    ) 
+    )
+  }
+
+  // If API key present, synchronize with translation platform
+  if (config.apiKey.length) {
+    const successCallback = (project) => {
+      console.log(`\n----------\nProject successfully synchronized. Please use this URL to translate: ${project.url}\n----------`)
+    }
+
+    const failCallback = (errors) => {
+      console.error(`\n----------\nSynchronization with Translation.io failed: ${errors.join(', ')}\n----------`)
+    }
+
+    sync.init(config, options, successCallback, (errors) => {
+      if (errors.length && errors[0] == 'This project has already been initialized.') {
+        sync.sync(config, options, successCallback, failCallback)
+      }
+      else {
+        failCallback(errors)
+      }
+    })
   }
 
   return true

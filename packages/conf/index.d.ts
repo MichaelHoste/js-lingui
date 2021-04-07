@@ -40,6 +40,7 @@ export declare type LinguiConfig = {
     rootDir: string;
     runtimeConfigModule: [string, string?];
     sourceLocale: string;
+    apiKey: string;
 };
 export declare const defaultConfig: LinguiConfig;
 export declare function getConfig({ cwd, configPath, skipValidation, }?: {
@@ -67,6 +68,7 @@ export declare const configValidation: {
         rootDir: string;
         runtimeConfigModule: [string, string?];
         sourceLocale: string;
+        apiKey: string;
     };
     deprecatedConfig: {
         fallbackLocale: (config: LinguiConfig & DeprecatedFallbackLanguage) => string;
