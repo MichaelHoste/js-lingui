@@ -97,7 +97,6 @@ Documentation: https://lingui.js.org/ref/conf.html
 
 exports[`@lingui/conf should return default config 1`] = `
 Object {
-  apiKey: ,
   catalogs: Array [
     Object {
       exclude: Array [
@@ -139,6 +138,7 @@ Object {
     @lingui/core,
     i18n,
   ],
+  service: Object {},
   sourceLocale: ,
 }
 `;

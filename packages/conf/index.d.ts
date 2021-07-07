@@ -23,6 +23,11 @@ export type DefaultLocaleObject = {
 
 export declare type FallbackLocales = LocaleObject | DefaultLocaleObject
 
+export type CatalogService = {
+    name: string
+    apiKey: string
+}
+
 export declare type LinguiConfig = {
     catalogs: CatalogConfig[];
     compileNamespace: "es" | "cjs" | "ts" | string;
@@ -40,7 +45,7 @@ export declare type LinguiConfig = {
     rootDir: string;
     runtimeConfigModule: [string, string?];
     sourceLocale: string;
-    apiKey: string;
+    service: CatalogService;
 };
 export declare const defaultConfig: LinguiConfig;
 export declare function getConfig({ cwd, configPath, skipValidation, }?: {
@@ -68,7 +73,7 @@ export declare const configValidation: {
         rootDir: string;
         runtimeConfigModule: [string, string?];
         sourceLocale: string;
-        apiKey: string;
+        service: CatalogService;
     };
     deprecatedConfig: {
         fallbackLocale: (config: LinguiConfig & DeprecatedFallbackLanguage) => string;

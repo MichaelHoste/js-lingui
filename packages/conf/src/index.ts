@@ -32,6 +32,11 @@ export type FallbackLocales = LocaleObject | DefaultLocaleObject | false
 
 type ModuleSource = [string, string?]
 
+type CatalogService = {
+  name: string
+  apiKey: string
+}
+
 export type LinguiConfig = {
   catalogs: CatalogConfig[]
   compileNamespace: "es" | "ts" | "cjs" | string
@@ -47,7 +52,7 @@ export type LinguiConfig = {
   rootDir: string
   runtimeConfigModule: ModuleSource | { [symbolName: string]: ModuleSource }
   sourceLocale: string
-  apiKey: string
+  service: CatalogService
 }
 
 // Enforce posix path delimiters internally
@@ -85,7 +90,7 @@ export const defaultConfig: LinguiConfig = {
   rootDir: ".",
   runtimeConfigModule: ["@lingui/core", "i18n"],
   sourceLocale: "",
-  apiKey: ""
+  service: {}
 }
 
 function configExists(path) {

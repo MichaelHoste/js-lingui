@@ -2,9 +2,29 @@ import fs from "fs"
 import PO from "pofile"
 import https from "https"
 
-// Initialize project with source and existing translations (only 1 time!)
+// Main sync method, call "Init" or "Sync" depending on the project context
+export default function syncProcess(config, options) {
+  const successCallback = (project) => {
+    console.log(`\n----------\nProject successfully synchronized. Please use this URL to translate: ${project.url}\n----------`)
+  }
+
+  const failCallback = (errors) => {
+    console.error(`\n----------\nSynchronization with Translation.io failed: ${errors.join(', ')}\n----------`)
+  }
+
+  init(config, options, successCallback, (errors) => {
+    if (errors.length && errors[0] == 'This project has already been initialized.') {
+      sync(config, options, successCallback, failCallback)
+    }
+    else {
+      failCallback(errors)
+    }
+  })
+}
+
+// Initialize project with source and existing translations (only first time!)
 // Cf. https://translation.io/docs/create-library#initialization
-export function init(config, options, successCallback, failCallback) {
+function init(config, options, successCallback, failCallback) {
   const sourceLocale  = config.sourceLocale || 'en'
   const targetLocales = config.locales.filter((value) => value != sourceLocale)
   const paths         = poPathsPerLocale(config)
@@ -49,7 +69,7 @@ export function init(config, options, successCallback, failCallback) {
     "segments": segments
   }
 
-  postTio("init", request, config.apiKey, (response) => {
+  postTio("init", request, config.service.apiKey, (response) => {
     if (response.errors) {
       failCallback(response.errors)
     }
@@ -60,9 +80,9 @@ export function init(config, options, successCallback, failCallback) {
   })
 }
 
-// Send all source text and receive all corresponding translations from Translation.io
+// Send all source text from PO to Translation.io and create new PO based on received translations
 // Cf. https://translation.io/docs/create-library#synchronization
-export function sync(config, options, successCallback, failCallback) {
+function sync(config, options, successCallback, failCallback) {
   const sourceLocale  = config.sourceLocale || 'en'
   const targetLocales = config.locales.filter((value) => value != sourceLocale)
   const paths         = poPathsPerLocale(config)
@@ -89,7 +109,7 @@ export function sync(config, options, successCallback, failCallback) {
     "segments": segments
   }
 
-  postTio("sync", request, config.apiKey, (response) => {
+  postTio("sync", request, config.service.apiKey, (response) => {
     if (response.errors) {
       failCallback(response.errors)
     }

@@ -8,7 +8,7 @@ import { AllCatalogsType, getCatalogs } from "./api/catalog"
 import { printStats } from "./api/stats"
 import { detect } from "./api/detect"
 import { helpRun } from "./api/help"
-import { sync } from "./api/sync"
+import syncProcess from "./services/translationIO"
 
 export type CliExtractOptions = {
   verbose: boolean
@@ -68,25 +68,17 @@ export default function command(
     )
   }
 
-  // If API key present, synchronize with translation platform
-  if (config.apiKey.length) {
-    const successCallback = (project) => {
-      console.log(`\n----------\nProject successfully synchronized. Please use this URL to translate: ${project.url}\n----------`)
-    }
+  // // If service key is present in configuration, synchronize with cloud translation platform
+  // if (typeof config.service === 'object' && config.service.name) {
+  //   try {
+  //     const service = await import(`./services/${config.service.name}`)
+  //     service.syncProcess(config, options)
+  //   } catch (error) {
+  //     console.error(`Can't load service module ${config.service.name}`)
+  //   }
+  // }
 
-    const failCallback = (errors) => {
-      console.error(`\n----------\nSynchronization with Translation.io failed: ${errors.join(', ')}\n----------`)
-    }
-
-    sync.init(config, options, successCallback, (errors) => {
-      if (errors.length && errors[0] == 'This project has already been initialized.') {
-        sync.sync(config, options, successCallback, failCallback)
-      }
-      else {
-        failCallback(errors)
-      }
-    })
-  }
+  syncProcess(config, options)
 
   return true
 }
