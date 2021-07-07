@@ -68,17 +68,12 @@ export default function command(
     )
   }
 
-  // // If service key is present in configuration, synchronize with cloud translation platform
-  // if (typeof config.service === 'object' && config.service.name) {
-  //   try {
-  //     const service = await import(`./services/${config.service.name}`)
-  //     service.syncProcess(config, options)
-  //   } catch (error) {
-  //     console.error(`Can't load service module ${config.service.name}`)
-  //   }
-  // }
-
-  syncProcess(config, options)
+  // If service key is present in configuration, synchronize with cloud translation platform
+  if (typeof config.service === 'object' && config.service.name && config.service.name.length) {
+    import(`./services/${config.service.name}`)
+      .then(module => module.default(config, options))
+      .catch(err => console.error(`Can't load service module ${config.service.name}`, err))
+  }
 
   return true
 }
