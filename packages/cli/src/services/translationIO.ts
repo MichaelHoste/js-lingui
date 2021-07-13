@@ -1,6 +1,8 @@
 import fs from "fs"
+import { dirname } from "path"
 import PO from "pofile"
 import https from "https"
+import glob from "glob"
 
 // Main sync method, call "Init" or "Sync" depending on the project context
 export default function syncProcess(config, options) {
@@ -13,7 +15,7 @@ export default function syncProcess(config, options) {
   }
 
   init(config, options, successCallback, (errors) => {
-    if (errors.length && errors[0] == 'This project has already been initialized.') {
+    if (errors.length && errors[0] === 'This project has already been initialized.') {
       sync(config, options, successCallback, failCallback)
     }
     else {
@@ -35,7 +37,7 @@ function init(config, options, successCallback, failCallback) {
     segments[targetLocale] = []
   })
 
-  // Create segments from source language PO items
+  // Create segments from source locale PO items
   paths[sourceLocale].forEach((path) => {
     let raw = fs.readFileSync(path).toString()
     let po = PO.parse(raw)
@@ -49,7 +51,7 @@ function init(config, options, successCallback, failCallback) {
     })
   })
 
-  // Add translations to segments from target language PO items
+  // Add translations to segments from target locale PO items
   targetLocales.forEach((targetLocale) => {
     paths[targetLocale].forEach((path) => {
       let raw = fs.readFileSync(path).toString()
@@ -74,7 +76,7 @@ function init(config, options, successCallback, failCallback) {
       failCallback(response.errors)
     }
     else {
-      saveSegmentsToTargetPos(paths, response.segments)
+      saveSegmentsToTargetPos(config, paths, response.segments)
       successCallback(response.project)
     }
   })
@@ -114,7 +116,7 @@ function sync(config, options, successCallback, failCallback) {
       failCallback(response.errors)
     }
     else {
-      saveSegmentsToTargetPos(paths, response.segments)
+      saveSegmentsToTargetPos(config, paths, response.segments)
       successCallback(response.project)
     }
   })
@@ -130,7 +132,7 @@ function createSegmentFromPoItem(item) {
     source: segmentHasKey ? item.msgstr[0] : item.msgid // if source segment, msgstr may be empty if --overwrite is used
   }
 
-  if (segmentType == 'key') {
+  if (segmentType === 'key') {
     segment.key = item.msgid
   }
 
@@ -150,7 +152,7 @@ function createPoItemFromSegment(segment) {
 
   let item = new PO.Item()
 
-  item.msgid             = segment.type == "key" ? segment.key : segment.source
+  item.msgid             = segment.type === "key" ? segment.key : segment.source
   item.msgstr            = [segment.target]
   item.references        = (segment.references && segment.references.length) ? segment.references : []
   item.extractedComments = segment.comment ? segment.comment.split(' | ') : []
@@ -160,10 +162,25 @@ function createPoItemFromSegment(segment) {
   return item
 }
 
-function saveSegmentsToTargetPos(paths, segmentsPerLanguage) {
-  Object.keys(segmentsPerLanguage).forEach((targetLanguage) => {
-    const languagePath = paths[targetLanguage][0]
-    const segments     = segmentsPerLanguage[targetLanguage]
+function saveSegmentsToTargetPos(config, paths, segmentsPerLocale) {
+  const NAME = "{name}"
+  const LOCALE = "{locale}"
+
+  Object.keys(segmentsPerLocale).forEach((targetLocale) => {
+    // Remove existing target POs and JS for this target locale
+    paths[targetLocale].forEach((path) => {
+      const jsPath  = path.replace(/\.po?$/, "") + ".js"
+      const dirPath = dirname(path)
+
+      // Remove PO, JS and empty dir
+      if (fs.existsSync(path)) { fs.unlinkSync(path) }
+      if (fs.existsSync(jsPath)) { fs.unlinkSync(jsPath) }
+      if (fs.existsSync(dirPath) && fs.readdirSync(dirPath).length === 0) { fs.rmdirSync(dirPath) }
+    })
+
+    // Find target path (ignoring {name})
+    const localePath = "".concat(config.catalogs[0].path.replace(LOCALE, targetLocale).replace(NAME, ''), ".po")
+    const segments = segmentsPerLocale[targetLocale]
 
     let po = new PO()
     let items = []
@@ -173,15 +190,18 @@ function saveSegmentsToTargetPos(paths, segmentsPerLanguage) {
       items.push(item)
     })
 
-    // Sort items by msgids
+    // Sort items by messageId
     po.items = items.sort((a, b) => {
       if (a.msgid < b.msgid) { return -1 }
       if (a.msgid > b.msgid) { return 1 }
       return 0
     })
 
-    po.save(languagePath, (err) => {
-      console.log(err)
+    // Check that localePath directory exists and save PO file
+    fs.promises.mkdir(dirname(localePath), {recursive: true}).then(() => {
+      po.save(localePath, (err) => {
+        console.error(err)
+      })
     })
   })
 }
@@ -195,7 +215,15 @@ function poPathsPerLocale(config) {
     paths[locale] = []
 
     config.catalogs.forEach((catalog) => {
-      paths[locale].push("".concat(catalog.path.replace(LOCALE, locale).replace(NAME, "*"), ".").concat('po'))
+      const path = "".concat(catalog.path.replace(LOCALE, locale).replace(NAME, "*"), ".po")
+
+      // If {name} is present (replaced by *), list all the existing POs
+      if (path.includes('*')) {
+        paths[locale] = paths[locale].concat(glob.sync(path))
+      }
+      else {
+        paths[locale].push(path)
+      }
     })
   })
 
@@ -215,7 +243,6 @@ function postTio(action, request, apiKey, successCallback, failCallback) {
   }
 
   let req = https.request(options, (res) => {
-    console.log('statusCode:', res.statusCode)
     res.setEncoding('utf8')
 
     let body = ""
@@ -231,7 +258,6 @@ function postTio(action, request, apiKey, successCallback, failCallback) {
   })
 
   req.on('error', (e) => {
-    console.log(e)
     console.error(e)
     failCallback(e)
   })
