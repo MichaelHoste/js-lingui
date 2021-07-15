@@ -1,7 +1,7 @@
 import { useEffect } from "react"
 
-import { I18nProvider } from "@lingui/react"
-import { i18n } from "@lingui/core"
+import { I18nProvider } from "@translation/react"
+import { i18n } from "@translation/core"
 
 import { activate } from "lingui-example/i18n"
 import "lingui-example/styles.css"

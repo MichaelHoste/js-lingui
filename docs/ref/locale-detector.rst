@@ -1,25 +1,25 @@
 ********************************************************
-API Reference - Locale Detection (@lingui/detect-locale)
+API Reference - Locale Detection (@translation/detect-locale)
 ********************************************************
 
-``@lingui/detect-locale`` is little package ``just (922 B Gzip)`` with some helper functions that will help you detect the locale of the user:
+``@translation/detect-locale`` is little package ``just (922 B Gzip)`` with some helper functions that will help you detect the locale of the user:
 
 Installation
 ============
 
-Install ``@lingui/detect-locale`` as a dependency:
+Install ``@translation/detect-locale`` as a dependency:
 
 .. code-block:: sh
 
-   npm install --save @lingui/detect-locale
+   npm install --save @translation/detect-locale
 
    # Or using yarn
-   # yarn add @lingui/detect-locale
+   # yarn add @translation/detect-locale
 
 Usage
 =====
 
-``@lingui/detect-locale:`` exports multiple methods:
+``@translation/detect-locale:`` exports multiple methods:
   - ``detect`` - `Will return the first occurence of detectors`
   - ``multipleDetect`` - `Will return an array with all the locales detected by each detector`
 
@@ -39,7 +39,7 @@ Usage with ``detect``
 
 .. code-block:: jsx
 
-  import { detect, fromUrl, fromStorage, fromNavigator } from "@lingui/detect-locale"
+  import { detect, fromUrl, fromStorage, fromNavigator } from "@translation/detect-locale"
 
   // can be a function with custom logic or just a string, `detect` method will handle it
   const DEFAULT_FALLBACK = () => "en"
@@ -59,7 +59,7 @@ Usage with ``multipleDetect``
 
 .. code-block:: jsx
 
-  import { multipleDetect, fromUrl, fromStorage, fromNavigator } from "@lingui/detect-locale"
+  import { multipleDetect, fromUrl, fromStorage, fromNavigator } from "@translation/detect-locale"
 
   // can be a function with custom logic or just a string, `detect` method will handle it
   const DEFAULT_FALLBACK = () => "en"

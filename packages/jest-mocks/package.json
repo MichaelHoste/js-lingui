@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@lingui/jest-mocks",
+  "name": "@translation/jest-mocks",
   "version": "3.0.3",
   "description": "Mocks for Jest",
   "main": "index.js",

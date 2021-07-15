@@ -2,7 +2,7 @@ import fs from "fs"
 import path from "path"
 import { transformFileSync } from "@babel/core"
 
-import plugin from "@lingui/babel-plugin-extract-messages"
+import plugin from "@translation/babel-plugin-extract-messages"
 
 const LOCALE_DIR = "./locale"
 
@@ -74,7 +74,7 @@ function testCase(testName, assertion) {
   }
 }
 
-describe("@lingui/babel-plugin-extract-messages", function () {
+describe("@translation/babel-plugin-extract-messages", function () {
   beforeAll(() => {
     rmdir(LOCALE_DIR)
   })

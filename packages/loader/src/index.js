@@ -1,11 +1,11 @@
 import path from "path"
 import * as R from "ramda"
-import { getConfig } from "@lingui/conf"
+import { getConfig } from "@translation/conf"
 import {
   createCompiledCatalog,
   getCatalogs,
   getCatalogForFile,
-} from "@lingui/cli/api"
+} from "@translation/cli/api"
 import loaderUtils from "loader-utils"
 // Check if webpack 5
 const isWebpack5 = parseInt(require("webpack").version) === 5;
@@ -66,7 +66,7 @@ export default function (source) {
       lingui: ".json"
     }
     // we replace the .js, because webpack appends automatically the .js on imports without extension
-    throw new Error(`File extension is mandatory, for ex: import("@lingui/loader!./${catalogRelativePath.replace(".js", formats[config.format])}")`)
+    throw new Error(`File extension is mandatory, for ex: import("@translation/loader!./${catalogRelativePath.replace(".js", formats[config.format])}")`)
   }
 
   const { locale, catalog } = getCatalogForFile(

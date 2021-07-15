@@ -1,5 +1,5 @@
-declare module '@lingui/macro' {
-  import type { MessageDescriptor } from "@lingui/core"
+declare module '@translation/macro' {
+  import type { MessageDescriptor } from "@translation/core"
 
   export type BasicType = {
     id?: string

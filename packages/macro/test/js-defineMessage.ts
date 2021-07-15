@@ -2,14 +2,14 @@ export default [
   {
     name: "should expand macros in message property",
     input: `
-        import { defineMessage, plural, arg } from '@lingui/macro';
+        import { defineMessage, plural, arg } from '@translation/macro';
         const message = defineMessage({
           comment: "Description",
           message: plural(arg("value"), { one: "book", other: "books" })
         })
     `,
     expected: `
-        import { i18n } from "@lingui/core";
+        import { i18n } from "@translation/core";
         const message =
           /*i18n*/
           {
@@ -21,13 +21,13 @@ export default [
   {
     name: "should left string message intact",
     input: `
-        import { defineMessage } from '@lingui/macro';
+        import { defineMessage } from '@translation/macro';
         const message = defineMessage({
           message: "Message"
         })
     `,
     expected: `
-        import { i18n } from "@lingui/core";
+        import { i18n } from "@translation/core";
         const message =
           /*i18n*/
           {
@@ -38,13 +38,13 @@ export default [
   {
     name: "should transform template literals",
     input: `
-        import { defineMessage } from '@lingui/macro';
+        import { defineMessage } from '@translation/macro';
         const message = defineMessage({
           message: \`Message \${name}\`
         })
     `,
     expected: `
-        import { i18n } from "@lingui/core";
+        import { i18n } from "@translation/core";
         const message =
           /*i18n*/
           {
@@ -58,14 +58,14 @@ export default [
   {
     name: "should preserve custom id",
     input: `
-        import { defineMessage } from '@lingui/macro';
+        import { defineMessage } from '@translation/macro';
         const message = defineMessage({
           id: "msg.id",
           message: "Message"
         })
     `,
     expected: `
-        import { i18n } from "@lingui/core";
+        import { i18n } from "@translation/core";
         const message =
           /*i18n*/
           {
@@ -77,13 +77,13 @@ export default [
   {
     name: "should preserve values",
     input: `
-        import { defineMessage } from '@lingui/macro';
+        import { defineMessage } from '@translation/macro';
         const message = defineMessage({
           message: t\`Hello $\{name\}\`
         })
     `,
     expected: `
-        import { i18n } from "@lingui/core";
+        import { i18n } from "@translation/core";
         const message =
           /*i18n*/
           {

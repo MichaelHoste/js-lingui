@@ -1,4 +1,4 @@
-import { Trans, Plural, plural } from "@lingui/macro"
+import { Trans, Plural, plural } from "@translation/macro"
 
 import { Layout } from "lingui-example/components/Layout"
 import { PluralExample } from "lingui-example/components/PluralExample"

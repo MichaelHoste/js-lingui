@@ -5,7 +5,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [3.8.2](https://github.com/lingui/js-lingui/compare/v3.8.1...v3.8.2) (2021-03-31)
 
-**Note:** Version bump only for package @lingui/react
+**Note:** Version bump only for package @translation/react
 
 
 
@@ -13,7 +13,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [3.8.1](https://github.com/lingui/js-lingui/compare/v3.8.0...v3.8.1) (2021-03-23)
 
-**Note:** Version bump only for package @lingui/react
+**Note:** Version bump only for package @translation/react
 
 
 
@@ -21,7 +21,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [3.8.0](https://github.com/lingui/js-lingui/compare/v3.7.2...v3.8.0) (2021-03-23)
 
-**Note:** Version bump only for package @lingui/react
+**Note:** Version bump only for package @translation/react
 
 
 
@@ -29,7 +29,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [3.7.2](https://github.com/lingui/js-lingui/compare/v3.7.1...v3.7.2) (2021-03-14)
 
-**Note:** Version bump only for package @lingui/react
+**Note:** Version bump only for package @translation/react
 
 
 
@@ -37,7 +37,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [3.7.1](https://github.com/lingui/js-lingui/compare/v3.7.0...v3.7.1) (2021-03-07)
 
-**Note:** Version bump only for package @lingui/react
+**Note:** Version bump only for package @translation/react
 
 
 
@@ -45,7 +45,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [3.7.0](https://github.com/lingui/js-lingui/compare/v3.6.0...v3.7.0) (2021-03-04)
 
-**Note:** Version bump only for package @lingui/react
+**Note:** Version bump only for package @translation/react
 
 
 
@@ -64,7 +64,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [3.5.1](https://github.com/lingui/js-lingui/compare/v3.5.0...v3.5.1) (2021-02-09)
 
-**Note:** Version bump only for package @lingui/react
+**Note:** Version bump only for package @translation/react
 
 
 
@@ -84,7 +84,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [3.4.0](https://github.com/lingui/js-lingui/compare/v3.3.0...v3.4.0) (2021-01-13)
 
-**Note:** Version bump only for package @lingui/react
+**Note:** Version bump only for package @translation/react
 
 
 
@@ -92,7 +92,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [3.3.0](https://github.com/lingui/js-lingui/compare/v3.2.3...v3.3.0) (2020-12-08)
 
-**Note:** Version bump only for package @lingui/react
+**Note:** Version bump only for package @translation/react
 
 
 
@@ -103,7 +103,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* export TransRenderProps from @lingui/react ([#877](https://github.com/lingui/js-lingui/issues/877)) ([3db9d6b](https://github.com/lingui/js-lingui/commit/3db9d6b0bfe9edae99523cd706de6826f67184ad))
+* export TransRenderProps from @translation/react ([#877](https://github.com/lingui/js-lingui/issues/877)) ([3db9d6b](https://github.com/lingui/js-lingui/commit/3db9d6b0bfe9edae99523cd706de6826f67184ad))
 * omit i18n prop in withI18n typescript interface ([#879](https://github.com/lingui/js-lingui/issues/879)) ([5927d42](https://github.com/lingui/js-lingui/commit/5927d42b256d1adfb26ed03367e521bfc8f1e2e6))
 
 
@@ -112,7 +112,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [3.2.2](https://github.com/lingui/js-lingui/compare/v3.2.1...v3.2.2) (2020-11-20)
 
-**Note:** Version bump only for package @lingui/react
+**Note:** Version bump only for package @translation/react
 
 
 
@@ -120,7 +120,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [3.2.0](https://github.com/lingui/js-lingui/compare/v3.1.0...v3.2.0) (2020-11-12)
 
-**Note:** Version bump only for package @lingui/react
+**Note:** Version bump only for package @translation/react
 
 
 

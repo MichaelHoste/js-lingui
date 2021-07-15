@@ -9,17 +9,17 @@ function exec(command) {
 const cwd = process.argv[2]
 
 const packageMap = {
-  "lingui-cli": "@lingui/cli",
-  "lingui-conf": "@lingui/conf",
-  "lingui-i18n": "@lingui/core",
-  "lingui-loader": "@lingui/loader",
-  "lingui-react": "@lingui/react",
-  "babel-plugin-lingui-transform-js": "@lingui/babel-plugin-transform-js",
-  "babel-plugin-lingui-transform-react": "@lingui/babel-plugin-transform-react",
+  "lingui-cli": "@translation/cli",
+  "lingui-conf": "@translation/conf",
+  "lingui-i18n": "@translation/core",
+  "lingui-loader": "@translation/loader",
+  "lingui-react": "@translation/react",
+  "babel-plugin-lingui-transform-js": "@translation/babel-plugin-transform-js",
+  "babel-plugin-lingui-transform-react": "@translation/babel-plugin-transform-react",
   "babel-plugin-lingui-extract-messages":
-    "@lingui/babel-plugin-extract-messages",
-  "babel-preset-lingui-js": "@lingui/babel-preset-js",
-  "babel-preset-lingui-react": "@lingui/babel-preset-react"
+    "@translation/babel-plugin-extract-messages",
+  "babel-preset-lingui-js": "@translation/babel-preset-js",
+  "babel-preset-lingui-react": "@translation/babel-preset-react"
 }
 
 const packageJson = require(path.resolve(cwd, "package.json"))

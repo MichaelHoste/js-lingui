@@ -88,7 +88,7 @@ export const defaultConfig: LinguiConfig = {
   orderBy: "messageId",
   pseudoLocale: "",
   rootDir: ".",
-  runtimeConfigModule: ["@lingui/core", "i18n"],
+  runtimeConfigModule: ["@translation/core", "i18n"],
   sourceLocale: "",
   service: {}
 }
@@ -156,7 +156,7 @@ export function getConfig({
 
 const exampleConfig = {
   ...defaultConfig,
-  runtimeConfigModule: multipleValidOptions({i18n: ["@lingui/core", "i18n"], Trans: ["@lingui/react", "Trans"]}, ["@lingui/core", "i18n"]),
+  runtimeConfigModule: multipleValidOptions({i18n: ["@translation/core", "i18n"], Trans: ["@translation/react", "Trans"]}, ["@translation/core", "i18n"]),
   fallbackLocales: multipleValidOptions(
     {},
     { "en-US": "en" },
@@ -180,7 +180,7 @@ const deprecatedConfig = {
 
     You can find more information here: https://github.com/lingui/js-lingui/issues/791
 
-    @lingui/cli now treats your current configuration as:
+    @translation/cli now treats your current configuration as:
     {
       ${chalk.bold('"fallbackLocales"')}: {
         default: ${chalk.bold(`"${config.fallbackLocale}"`)}
@@ -196,7 +196,7 @@ const deprecatedConfig = {
       "catalogs"
     )} instead.
 
-    @lingui/cli now treats your current configuration as:
+    @translation/cli now treats your current configuration as:
 
     {
       ${chalk.bold('"catalogs"')}: ${JSON.stringify(
@@ -215,7 +215,7 @@ const deprecatedConfig = {
       "catalogs"
     )} instead.
 
-    @lingui/cli now treats your current configuration as:
+    @translation/cli now treats your current configuration as:
 
     {
       ${chalk.bold('"catalogs"')}: ${JSON.stringify(
@@ -234,7 +234,7 @@ const deprecatedConfig = {
       "catalogs"
     )} instead.
 
-    @lingui/cli now treats your current configuration as:
+    @translation/cli now treats your current configuration as:
 
     {
       ${chalk.bold('"catalogs"')}: ${JSON.stringify(
@@ -515,7 +515,7 @@ function getCldrParentLocale(sourceLocale: string) {
 /**
  * Replace localeDir, srcPathDirs and srcPathIgnorePatterns with catalogs
  *
- * Released in @lingui/conf 3.0
+ * Released in @translation/conf 3.0
  * Remove anytime after 4.x
  */
 type DeprecatedLocaleDir = {

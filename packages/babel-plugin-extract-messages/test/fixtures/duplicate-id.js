@@ -1,4 +1,4 @@
-import { Trans } from "@lingui/react"
+import { Trans } from "@translation/react"
 
 // OK - Default message is defined here
 ;<Trans id="msg" message="Hello World" />

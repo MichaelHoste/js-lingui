@@ -1,5 +1,5 @@
 import { createMacro } from "babel-plugin-macros"
-import { getConfig } from "@lingui/conf"
+import { getConfig } from "@translation/conf"
 
 import MacroJS from "./macroJs"
 import MacroJSX from "./macroJsx"
@@ -11,7 +11,7 @@ const getSymbolSource = (name: string) => {
     if (name === "i18n") {
       return config.runtimeConfigModule
     } else {
-      return ["@lingui/react", name]
+      return ["@translation/react", name]
     }
   } else {
     if (
@@ -19,7 +19,7 @@ const getSymbolSource = (name: string) => {
     ) {
       return config.runtimeConfigModule[name]
     } else {
-      return ["@lingui/react", name]
+      return ["@translation/react", name]
     }
   }
 }

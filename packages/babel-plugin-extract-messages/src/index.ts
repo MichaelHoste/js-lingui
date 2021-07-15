@@ -2,7 +2,7 @@ import fs from "fs"
 import fsPath from "path"
 import mkdirp from "mkdirp"
 import generate from "@babel/generator"
-import { getConfig } from "@lingui/conf"
+import { getConfig } from "@translation/conf"
 
 const CONFIG = Symbol("I18nConfig")
 
@@ -80,20 +80,20 @@ export default function ({ types: t }) {
     visitor: {
       // Get the local name of Trans component. Usually it's just `Trans`, but
       // it might be different when the import is aliased:
-      // import { Trans as T } from '@lingui/react';
+      // import { Trans as T } from '@translation/react';
       ImportDeclaration(path) {
         const { node } = path
 
         const moduleName = node.source.value
         if (
-          !["@lingui/react", "@lingui/macro", "@lingui/core"].includes(
+          !["@translation/react", "@translation/macro", "@translation/core"].includes(
             moduleName
           )
         )
           return
 
         const importDeclarations = {}
-        if (moduleName === "@lingui/react" || moduleName === "@lingui/macro") {
+        if (moduleName === "@translation/react" || moduleName === "@translation/macro") {
           node.specifiers.forEach((specifier) => {
             importDeclarations[specifier.imported.name] = specifier.local.name
           })

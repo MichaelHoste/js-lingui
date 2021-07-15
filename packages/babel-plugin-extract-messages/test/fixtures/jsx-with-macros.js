@@ -1,4 +1,4 @@
-import { t, plural, Trans } from "@lingui/macro"
+import { t, plural, Trans } from "@translation/macro"
 
 ;<Trans>Hi, my name is {name}</Trans>
 ;<span title={t`Title`} />

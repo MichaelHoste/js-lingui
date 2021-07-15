@@ -2,7 +2,7 @@ export default [
   {
     name: "Nested macros",
     input: `
-        import { select, plural } from '@lingui/macro'
+        import { select, plural } from '@translation/macro'
         select(gender, {
           "male": plural(numOfGuests, {
             one: "He invites one guest",
@@ -13,7 +13,7 @@ export default [
         });
       `,
     expected: `
-        import { i18n } from "@lingui/core";
+        import { i18n } from "@translation/core";
         /*i18n*/
         i18n._("{gender, select, male {{numOfGuests, plural, one {He invites one guest} other {He invites # guests}}} female {She is {gender}} other {They is {gender}}}", {
           gender: gender,
@@ -24,14 +24,14 @@ export default [
   {
     name: "Macro with escaped reserved props",
     input: `
-        import { select } from '@lingui/macro'
+        import { select } from '@translation/macro'
         select(value, {
           id: 'test escaped id',
           comment: 'test escaped comment'
         })
       `,
     expected: `
-        import { i18n } from "@lingui/core";
+        import { i18n } from "@translation/core";
         /*i18n*/
         i18n._("{value, select, id {test escaped id} comment {test escaped comment}}", {
           value: value

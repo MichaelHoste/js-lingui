@@ -1,5 +1,5 @@
 {
-  "name": "@lingui/core",
+  "name": "@translation/core",
   "version": "3.8.2",
   "description": "I18n tools for javascript",
   "main": "index.js",

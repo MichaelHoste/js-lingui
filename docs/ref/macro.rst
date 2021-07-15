@@ -1,8 +1,8 @@
 *************************
-@lingui/macro - Reference
+@translation/macro - Reference
 *************************
 
-``@lingui/macro`` package provides `babel macros <https://github.com/kentcdodds/babel-plugin-macros>`_ which
+``@translation/macro`` package provides `babel macros <https://github.com/kentcdodds/babel-plugin-macros>`_ which
 transforms JavaScript objects and JSX elements into messages in ICU MessageFormat.
 
 Installation
@@ -12,18 +12,18 @@ Babel macros require babel-plugin-macros_ to work. If you use a framework
 (for example GatsbyJS, Create React App >2.0) you might already have macros enabled.
 Otherwise install it as any other Babel plugin:
 
-1. Install ``babel-plugin-macros`` as a dev dependency and ``@lingui/macro`` as dependency::
+1. Install ``babel-plugin-macros`` as a dev dependency and ``@translation/macro`` as dependency::
 
       npm install --save-dev babel-plugin-macros
-      npm install --save @lingui/macro
+      npm install --save @translation/macro
 
       # Or using yarn
       # yarn add --dev babel-plugin-macros
-      # yarn add @lingui/macro
+      # yarn add @translation/macro
 
    .. note::
 
-      It's recommended to install ``@lingui/macro`` package as a production dependency rather than development one
+      It's recommended to install ``@translation/macro`` package as a production dependency rather than development one
       to avoid ``import/no-extraneous-dependencies`` errors in ESLint.
 
 2. Add ``macros`` to the top of plugins section in your Babel config:
@@ -47,16 +47,16 @@ The advantages of using macros are:
    - Non essentials data are removed from production build (e.g. comments and default messages) to shave few bytes
 
 **JSX macros** are transformed to :component:`Trans` component from
-:doc:`@lingui/react <react>`:
+:doc:`@translation/react <react>`:
 
 .. code-block:: jsx
 
-   import { Trans } from "@lingui/macro"
+   import { Trans } from "@translation/macro"
    <Trans>Attachment {name} saved</Trans>
 
    // ↓ ↓ ↓ ↓ ↓ ↓
 
-   import { Trans } from "@lingui/react"
+   import { Trans } from "@translation/react"
    <Trans id="Attachment {name} saved" values={{ name }} />
 
 **JS macros** (i.e. macros that looks like a simple JavaScript functions) are
@@ -64,17 +64,17 @@ transformed into ``i18n._`` call.
 
 .. code-block:: jsx
 
-   import { t } from "@lingui/macro"
+   import { t } from "@translation/macro"
    t`Attachment ${name} saved`
 
    // ↓ ↓ ↓ ↓ ↓ ↓
 
-   import { i18n } from "@lingui/core"
+   import { i18n } from "@translation/core"
    i18n._(/*i18n*/{ id: "Attachment {name} saved", values: { name }})
 
 .. note::
 
-   By default, the ``i18n`` object is imported from ``@lingui/core``.
+   By default, the ``i18n`` object is imported from ``@translation/core``.
    If you use a custom instance of ``i18n`` object, you need to set
    :conf:`runtimeConfigModule`
 
@@ -84,8 +84,8 @@ and can be used anytime later:
 
 .. code-block:: jsx
 
-   import { i18n } from "@lingui/core"
-   import { defineMessage } from "@lingui/macro"
+   import { i18n } from "@translation/core"
+   import { defineMessage } from "@translation/macro"
 
    // define message
    const message = defineMessage({ message: `Attachment ${name} saved` })
@@ -95,7 +95,7 @@ and can be used anytime later:
 
    // ↓ ↓ ↓ ↓ ↓ ↓
 
-   import { i18n } from "@lingui/core"
+   import { i18n } from "@translation/core"
 
    // define message
    const message = /*i18n*/{ id: "Attachment {name} saved", values: { name }})
@@ -198,7 +198,7 @@ into a *Message Descriptor* wrapped inside of ``i18n._`` call.
 
 .. note::
 
-   By default, the ``i18n`` object is imported from ``@lingui/core``.
+   By default, the ``i18n`` object is imported from ``@translation/core``.
    If you use a custom instance of ``i18n`` object, you need to set
    :conf:`runtimeConfigModule`
 
@@ -236,12 +236,12 @@ in ICU MessageFormat:
 
 .. code-block:: jsx
 
-   import { t } from "@lingui/macro"
+   import { t } from "@translation/macro"
    const message = t`Hello World`
 
    // ↓ ↓ ↓ ↓ ↓ ↓
 
-   import { i18n } from "@lingui/core"
+   import { i18n } from "@translation/core"
    const message = i18n._(/*i18n*/{
      id: 'Hello World',
    })
@@ -250,12 +250,12 @@ Message variables are supported:
 
 .. code-block:: jsx
 
-   import { t } from "@lingui/macro"
+   import { t } from "@translation/macro"
    const message = t`My name is ${name}`
 
    // ↓ ↓ ↓ ↓ ↓ ↓
 
-   import { i18n } from "@lingui/core"
+   import { i18n } from "@translation/core"
    const message = i18n._(/*i18n*/{
      id: 'My name is {name}',
      values: { name }
@@ -267,12 +267,12 @@ other expressions are referenced by numeric index:
 
 .. code-block:: jsx
 
-   import { t } from "@lingui/macro"
+   import { t } from "@translation/macro"
    const message = t`Today is ${date(name)}`
 
    // ↓ ↓ ↓ ↓ ↓ ↓
 
-   import { i18n } from "@lingui/core"
+   import { i18n } from "@translation/core"
    const message = i18n._(/*i18n*/{
      id: 'Today is {0}',
      values: { 0: date(name) }
@@ -283,7 +283,7 @@ calling ``t`` macro with a message descriptor:
 
 .. code-block:: jsx
 
-   import { t } from "@lingui/macro"
+   import { t } from "@translation/macro"
    const message = t({
       id: 'msg.hello',
       comment: 'Greetings at the homepage',
@@ -292,7 +292,7 @@ calling ``t`` macro with a message descriptor:
 
    // ↓ ↓ ↓ ↓ ↓ ↓
 
-   import { i18n } from "@lingui/core"
+   import { i18n } from "@translation/core"
    const message = i18n._(/*i18n*/{
       id: 'msg.hello',
       comment: 'Greetings at the homepage',
@@ -304,7 +304,7 @@ as if it were wrapped in ``t`` macro. ``message`` also accepts any other macros:
 
 .. code-block:: jsx
 
-   import { t } from "@lingui/macro"
+   import { t } from "@translation/macro"
    const message = t({
       id: 'msg.plural',
       message: plural(value, { one: "...", other: "..." })
@@ -312,7 +312,7 @@ as if it were wrapped in ``t`` macro. ``message`` also accepts any other macros:
 
    // ↓ ↓ ↓ ↓ ↓ ↓
 
-   import { i18n } from "@lingui/core"
+   import { i18n } from "@translation/core"
    const message = i18n._(/*i18n*/{
       id: 'msg.plural',
       message: '{value, plural, one {...} other {...}}'
@@ -335,7 +335,7 @@ used in the source code depends on your source locale (e.g. English has only
 
 .. code-block:: jsx
 
-   import { plural } from "@lingui/macro"
+   import { plural } from "@translation/macro"
    const message = plural(count, {
       one: "# Book",
       other: "# Books"
@@ -343,7 +343,7 @@ used in the source code depends on your source locale (e.g. English has only
 
    // ↓ ↓ ↓ ↓ ↓ ↓
 
-   import { i18n } from "@lingui/core"
+   import { i18n } from "@translation/core"
    const message = i18n._(/*i18n*/{
      id: '{count, plural, one {# Book} other {# Books}}',
      values: { count }
@@ -355,7 +355,7 @@ are transformed automatically:
 
 .. code-block:: jsx
 
-   import { plural } from "@lingui/macro"
+   import { plural } from "@translation/macro"
    const message = plural(count, {
       one: `${name} has # friend`,
       other: `${name} has # friends`
@@ -363,7 +363,7 @@ are transformed automatically:
 
    // ↓ ↓ ↓ ↓ ↓ ↓
 
-   import { i18n } from "@lingui/core"
+   import { i18n } from "@translation/core"
    const message = i18n._(/*i18n*/{
      id: '{count, plural, one {{name} has # friend} other {{name} has # friends}}',
      values: { count }
@@ -374,7 +374,7 @@ two counters:
 
 .. code-block:: jsx
 
-   import { plural } from "@lingui/macro"
+   import { plural } from "@translation/macro"
    const message = plural(numBooks, {
       one: plural(numArticles, {
          one: `1 book and 1 article`,
@@ -389,7 +389,7 @@ two counters:
    // ↓ ↓ ↓ ↓ ↓ ↓
    // Generated message was wrapped for better readability
 
-   import { i18n } from "@lingui/core"
+   import { i18n } from "@translation/core"
    const message = i18n._(/*i18n*/{
      id: `{count, plural,
             one {{numArticles, plural,
@@ -429,7 +429,7 @@ cardinal plural forms it uses ordinal forms:
 
 .. code-block:: jsx
 
-   import { selectOrdinal } from "@lingui/macro"
+   import { selectOrdinal } from "@translation/macro"
    const message = selectOrdinal(count, {
       one: "1st",
       two: "2nd",
@@ -439,7 +439,7 @@ cardinal plural forms it uses ordinal forms:
 
    // ↓ ↓ ↓ ↓ ↓ ↓
 
-   import { i18n } from "@lingui/core"
+   import { i18n } from "@translation/core"
    const message = i18n._(/*i18n*/{
      id: '{count, selectOrdinal, one {1st} two {2nd} few {3rd} other {#th}}',
      values: { count }
@@ -464,7 +464,7 @@ provided in ``options`` object which key matches exactly ``value``:
 
 .. code-block:: jsx
 
-   import { select } from "@lingui/macro"
+   import { select } from "@translation/macro"
    const message = select(gender, {
       male: "he",
       female: "she",
@@ -473,7 +473,7 @@ provided in ``options`` object which key matches exactly ``value``:
 
    // ↓ ↓ ↓ ↓ ↓ ↓
 
-   import { i18n } from "@lingui/core"
+   import { i18n } from "@translation/core"
    const message = i18n._(/*i18n*/{
      id: '{gender, select, male {he} female {she} other {they}}',
      values: { gender }
@@ -511,7 +511,7 @@ Either ``id`` or ``message`` property is required.
 
 .. code-block:: jsx
 
-   import { defineMessage } from "@lingui/macro"
+   import { defineMessage } from "@translation/macro"
    const message = defineMessage({
       id: "Navigation / About",
       message: "About us"
@@ -529,7 +529,7 @@ string literals don't need to be tagged with :jsmacro:`t`.
 
 .. code-block:: jsx
 
-   import { defineMessage, t } from "@lingui/macro"
+   import { defineMessage, t } from "@translation/macro"
 
    const name = "Joe"
 
@@ -553,7 +553,7 @@ and it gives extra context for translators. It's removed from production code:
 
 .. code-block:: jsx
 
-   import { defineMessage } from "@lingui/macro"
+   import { defineMessage } from "@translation/macro"
    const message = defineMessage({
       comment: "Link in navigation pointing to About page",
       message: "About us"
@@ -572,7 +572,7 @@ and it gives extra context for translators. It's removed from production code:
 
    .. code-block:: jsx
 
-      import { defineMessage } from "@lingui/macro"
+      import { defineMessage } from "@translation/macro"
       const message = defineMessage({
          id: "Navigation / About",
          comment: "Link in navigation pointing to About page",
@@ -604,11 +604,11 @@ In such case, generated message is used as a default translation.
 
 .. code-block:: jsx
 
-   import { Trans } from "@lingui/macro"
+   import { Trans } from "@translation/macro"
    <Trans id="message.attachment_saved">Attachment {name} saved.</Trans>
 
    // ↓ ↓ ↓ ↓ ↓ ↓
-   import { Trans } from "@lingui/react"
+   import { Trans } from "@translation/react"
    <Trans id="message.attachment_saved" message="Attachment {name} saved." />
 
 comment
@@ -621,7 +621,7 @@ render
 ~~~~~~
 
 Render prop function used to render translation. This prop is directly passed to
-:component:`Trans` component from :doc:`@lingui/react <react>`. See
+:component:`Trans` component from :doc:`@translation/react <react>`. See
 `rendering of translations <react.html#rendering-translations>`_ for more info.
 
 Trans
@@ -637,36 +637,36 @@ but also for messages with inline markup:
 
 .. code-block:: jsx
 
-   import { Trans } from "@lingui/macro"
+   import { Trans } from "@translation/macro"
    <Trans>Refresh inbox</Trans>;
 
    // ↓ ↓ ↓ ↓ ↓ ↓
-   import { Trans } from "@lingui/react"
+   import { Trans } from "@translation/react"
    <Trans id="Refresh inbox" />
 
 Custom ``id`` is preserved:
 
 .. code-block:: jsx
 
-   import { Trans } from "@lingui/macro"
+   import { Trans } from "@translation/macro"
    <Trans id="message.attachment_saved">Attachment {name} saved.</Trans>
 
    // ↓ ↓ ↓ ↓ ↓ ↓
 
-   import { Trans } from "@lingui/react"
+   import { Trans } from "@translation/react"
    <Trans id="message.attachment_saved" message="Attachment {name} saved." />
 
 This macro is especially useful when message contains inline markup.
 
 .. code-block:: jsx
 
-   import { Trans } from "@lingui/macro"
+   import { Trans } from "@translation/macro"
 
    <Trans>Read the <a href="/docs">docs</a>.</Trans>;
 
    // ↓ ↓ ↓ ↓ ↓ ↓
 
-   import { Trans } from "@lingui/macro"
+   import { Trans } from "@translation/macro"
    <Trans id="Read the <0>docs</0>." components={{0: <a href="/docs" />}} />
 
 Components and HTML tags are replaced with dummy indexed tags (``<0></0>``) which
@@ -699,11 +699,11 @@ Props of :jsxmacro:`Plural` macro are transformed into :icu:`plural` format.
 
 .. code-block:: jsx
 
-   import { Plural } from "@lingui/macro"
+   import { Plural } from "@translation/macro"
    <Plural value={numBooks} one="Book" other="Books" />
 
    // ↓ ↓ ↓ ↓ ↓ ↓
-   import { Trans } from "@lingui/react"
+   import { Trans } from "@translation/react"
    <Trans id="{numBooks, plural, one {Book} other {Books}}" values={{ numBooks }} />
 
 ``#`` are formatted using :icu:`number` format. ``format`` prop is passed to this
@@ -716,7 +716,7 @@ but in React this isn't a valid prop name. Therefore, exact matches are expresse
 
 .. code-block:: jsx
 
-   import { Plural } from "@lingui/macro"
+   import { Plural } from "@translation/macro"
 
    <Plural
        value={count}
@@ -764,7 +764,7 @@ format:
 
 .. code-block:: jsx
 
-   import { SelectOrdinal } from "@lingui/macro"
+   import { SelectOrdinal } from "@translation/macro"
 
    // count == 1 -> 1st
    // count == 2 -> 2nd
@@ -792,7 +792,7 @@ Props of :jsxmacro:`Select` macro are transformed into :icu:`select` format:
 
 .. code-block:: jsx
 
-   import { Select } from "@lingui/macro"
+   import { Select } from "@translation/macro"
 
    // gender == "female"      -> Her book
    // gender == "male"        -> His book

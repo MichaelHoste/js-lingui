@@ -19,7 +19,7 @@ function getCreateHeaders(language = "no") {
     "Mime-Version": "1.0",
     "Content-Type": "text/plain; charset=utf-8",
     "Content-Transfer-Encoding": "8bit",
-    "X-Generator": "@lingui/cli",
+    "X-Generator": "@translation/cli",
     Language: language,
   }
 }

@@ -36,7 +36,7 @@ async function releaseInVerdaccio() {
   console.log()
   console.log(
     `Done! Run ${chalk.yellow(
-      "npm install --registry http://0.0.0.0:4873 @lingui/[package]"
+      "npm install --registry http://0.0.0.0:4873 @translation/[package]"
     )} in target project to install development version of package.`
   )
 

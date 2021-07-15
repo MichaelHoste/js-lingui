@@ -1,5 +1,5 @@
 import mockFs from "mock-fs"
-import { mockConfig } from "@lingui/jest-mocks"
+import { mockConfig } from "@translation/jest-mocks"
 import { printStats } from "./stats"
 import { defaultMergeOptions, makeCatalog, makeNextMessage } from "../tests"
 

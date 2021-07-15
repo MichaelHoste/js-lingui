@@ -1,23 +1,23 @@
 .. _ref-cli:
 
 *********************************
-API Reference - CLI (@lingui/cli)
+API Reference - CLI (@translation/cli)
 *********************************
 
-``@lingui/cli`` manages locales, extracts messages from source files into
+``@translation/cli`` manages locales, extracts messages from source files into
 message catalogs and compiles message catalogs for production use.
 
 
 Install
 =======
 
-1. Install ``@lingui/cli`` as a development dependency:
+1. Install ``@translation/cli`` as a development dependency:
 
    .. code-block:: shell
 
-      npm install --save-dev @lingui/cli @babel/core
+      npm install --save-dev @translation/cli @babel/core
       # Or yarn
-      yarn add --dev @lingui/cli @babel/core
+      yarn add --dev @translation/cli @babel/core
 
 2. Add following scripts to your ``package.json``:
 

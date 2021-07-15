@@ -1,7 +1,7 @@
 import fs from "fs-extra"
 import path from "path"
 import mockFs from "mock-fs"
-import { mockConsole, mockConfig } from "@lingui/jest-mocks"
+import { mockConsole, mockConfig } from "@translation/jest-mocks"
 
 import {
   getCatalogs,

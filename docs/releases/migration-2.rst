@@ -18,16 +18,16 @@ were renamed:
 ===================================== =====================================
 New package name                      Previous package name
 ===================================== =====================================
-@lingui/babel-preset-js               babel-preset-lingui-js
-@lingui/babel-preset-react            babel-preset-lingui-react
-@lingui/babel-plugin-transform-js     babel-plugin-lingui-transform-js
-@lingui/babel-plugin-transform-react  babel-plugin-lingui-transform-react
-@lingui/babel-plugin-extract-messages babel-plugin-lingui-extract-messages
-@lingui/react                         lingui-react
-@lingui/core                          lingui-i18n
-@lingui/cli                           lingui-cli
-@lingui/loader                        lingui-loader
-@lingui/conf                          lingui-conf
+@translation/babel-preset-js               babel-preset-lingui-js
+@translation/babel-preset-react            babel-preset-lingui-react
+@translation/babel-plugin-transform-js     babel-plugin-lingui-transform-js
+@translation/babel-plugin-transform-react  babel-plugin-lingui-transform-react
+@translation/babel-plugin-extract-messages babel-plugin-lingui-extract-messages
+@translation/react                         lingui-react
+@translation/core                          lingui-i18n
+@translation/cli                           lingui-cli
+@translation/loader                        lingui-loader
+@translation/conf                          lingui-conf
 ===================================== =====================================
 
 Default message catalog format
@@ -155,7 +155,7 @@ enough to upgrade your lingui babel plugin. Otherwise simple refactoring is requ
 New features
 ============
 
-Custom IDs for `@lingui/core` methods
+Custom IDs for `@translation/core` methods
 -------------------------------------
 
 Most i18n methods in core library (``i18n.t``, ``i18n.select``, ``i18n.plural``)

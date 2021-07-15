@@ -2,7 +2,7 @@ import * as React from "react"
 import { act, render } from "@testing-library/react"
 
 import { withI18n, I18nProvider } from "./I18nProvider"
-import { setupI18n } from "@lingui/core"
+import { setupI18n } from "@translation/core"
 
 describe("I18nProvider", () => {
 

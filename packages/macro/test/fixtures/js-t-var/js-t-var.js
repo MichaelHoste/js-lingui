@@ -1,4 +1,4 @@
-import { t } from '@lingui/macro'
+import { t } from '@translation/macro'
 
 function scoped (foo) {
   if (foo) {

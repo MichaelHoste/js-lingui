@@ -4,7 +4,7 @@ Migration guide from 2.x to 3.x
 
 .. important::
 
-   Check out the `@lingui/codemods <https://www.npmjs.com/package/@lingui/codemods>`_
+   Check out the `@translation/codemods <https://www.npmjs.com/package/@translation/codemods>`_
    package for semi-automatic migration of your codebase.
 
 Backward incompatible changes
@@ -16,7 +16,7 @@ Minimal required versions are:
 - React: 16.8
 - Babel: 7
 
-@lingui/react
+@translation/react
 -------------
 
 - ``<I18n>`` render-prop component was removed in favor of :js:func:`useLingui` hook.
@@ -40,13 +40,13 @@ Minimal required versions are:
 
      <Trans id="Read <a>the docs</a>!" components={{a: <a href="/docs" />}} />
 
-- ``NumberFormat`` and ``DateFormat`` components were removed. Import ``i18n`` from ``@lingui/core``
+- ``NumberFormat`` and ``DateFormat`` components were removed. Import ``i18n`` from ``@translation/core``
 package and use ``i18n.date()`` and ``ì18n.number()`` instead.
 
 Removed :component:`I18nProvider` declarative API
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-LinguiJS started as a React library. After ``@lingui/core`` package was introduced,
+LinguiJS started as a React library. After ``@translation/core`` package was introduced,
 there were two ways how to switch active locales and manage catalogs in React: either
 using :component:`I18nProvider` declarative API or using ``setupI18n`` imperative API.
 
@@ -55,8 +55,8 @@ is simplified and accepts ``i18n`` manager, which must be created manually:
 
 .. code-block:: diff
 
-     import { I18nProvider } from '@lingui/react'
-     import { i18n } from "@lingui/core"
+     import { I18nProvider } from '@translation/react'
+     import { i18n } from "@translation/core"
    + import { en } from 'make-plural/plurals'
      import { messages } from './locale/en/messages.js'
 
@@ -73,7 +73,7 @@ is simplified and accepts ``i18n`` manager, which must be created manually:
         )
      }
 
-@lingui/core
+@translation/core
 ------------
 
 - Package now exports default ``i18n`` instance. It's recommended to use it unless
@@ -81,8 +81,8 @@ is simplified and accepts ``i18n`` manager, which must be created manually:
 
   .. code-block:: diff
 
-   + import { i18n } from "@lingui/core"
-   - import { setupI18n } from "@lingui/core"
+   + import { i18n } from "@translation/core"
+   - import { setupI18n } from "@translation/core"
 
    - const i18n = setupI18n()
      i18n.activate('en')
@@ -124,7 +124,7 @@ for a single locale or multiple catalogs at once.
 
 .. code-block:: diff
 
-     import { i18n } from "@lingui/core"
+     import { i18n } from "@translation/core"
      import catalogEn from './locale/en/messages.js'
 
    - i18n.load({ en: catalogEn })
@@ -137,7 +137,7 @@ for a single locale or multiple catalogs at once.
    .. code-block:: jsx
 
       // i18n.js
-      import { i18n } from "@lingui/core"
+      import { i18n } from "@translation/core"
       import catalogEn from './locale/en/messages.js'
       import catalogFr from './locale/fr/messages.js'
 
@@ -146,7 +146,7 @@ for a single locale or multiple catalogs at once.
          fr: catalogFr.messages
       })
 
-@lingui/macro
+@translation/macro
 -------------
 
 - :jsmacro:`plural`, :jsmacro:`select` and :jsmacro:`selectOrdinal` accepts value as a first parameter:
@@ -156,7 +156,7 @@ for a single locale or multiple catalogs at once.
      - plural({ value, one: "# book", other: "# books" })
      + plural(value, { one: "# book", other: "# books" })
 
-@lingui/cli
+@translation/cli
 -----------
 
 - command ``lingui init`` was removed
@@ -206,14 +206,14 @@ needed anymore.
 
    .. code-block:: shell
 
-      npm uninstall @lingui/babel-preset-react
-      npm install --dev @lingui/macro babel-plugin-macros
+      npm uninstall @translation/babel-preset-react
+      npm install --dev @translation/macro babel-plugin-macros
 
    .. code-block:: diff
 
       {
          "presets": [
-      -      "@lingui/babel-preset-react"
+      -      "@translation/babel-preset-react"
          ],
          "plugins": [
       +      "macros",
@@ -221,21 +221,21 @@ needed anymore.
       }
 
 2. Import :jsxmacro:`Trans`, :jsxmacro:`Plural`, :jsxmacro:`Select` and
-   :jsxmacro:`SelectOrdinal` from ``@lingui/macro``:
+   :jsxmacro:`SelectOrdinal` from ``@translation/macro``:
 
    .. code-block:: diff
 
-      - import { Trans } from "@lingui/react"
-      + import { Trans } from "@lingui/macro"
+      - import { Trans } from "@translation/react"
+      + import { Trans } from "@translation/macro"
 
    .. note::
 
       If you used :component:`Trans` component without children, then keep the import
-      from ``@lingui/react``:
+      from ``@translation/react``:
 
       .. code-block:: jsx
 
-         import { Trans } from "@lingui/react"
+         import { Trans } from "@translation/react"
 
          const CustomID = () => <Trans id="msg.id" />
          const DynamicID = () => <Trans id={msgId} />
@@ -247,8 +247,8 @@ needed anymore.
 
    .. code-block:: diff
 
-        import { i18n } from "@lingui/core"
-      + import { t } from "@lingui/macro"
+        import { i18n } from "@translation/core"
+      + import { t } from "@translation/macro"
 
       - i18n.t`Hello World`
       + t`Hello World`
@@ -265,7 +265,7 @@ New features
 
 .. code-block:: jsx
 
-   import { i18n } from "@lingui/core"
+   import { i18n } from "@translation/core"
 
    // Lingui v2 and v3
    i18n.load({

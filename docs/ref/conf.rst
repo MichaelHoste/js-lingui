@@ -32,7 +32,7 @@ Default config:
     "orderBy": "messageId",
     "pseudoLocale": "",
     "rootDir": ".",
-    "runtimeConfigModule": ["@lingui/core", "i18n"],
+    "runtimeConfigModule": ["@translation/core", "i18n"],
     "sourceLocale": "",
    }
 
@@ -214,7 +214,7 @@ Use ES6 named export + .ts file with an additional {compiledFile}.d.ts file:
    /* eslint-disable */export const messages = {"..."}
 
 .. code-block:: js
-      import { Messages } from '@lingui/core';
+      import { Messages } from '@translation/core';
       declare const messages: Messages;
       export { messages };
 
@@ -454,7 +454,7 @@ settings will refer back to this value.
 runtimeConfigModule
 -------------------
 
-Default: ``["@lingui/core", "i18n"]``
+Default: ``["@translation/core", "i18n"]``
 
 Module path with exported i18n object. The first value in array is module path,
 the second is the import identifier. This value is used in macros, which need

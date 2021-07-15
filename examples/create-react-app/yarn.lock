@@ -1418,19 +1418,19 @@
     "@types/yargs" "^15.0.0"
     chalk "^4.0.0"
 
-"@lingui/babel-plugin-extract-messages@^3.7.1":
+"@translation/babel-plugin-extract-messages@^3.7.1":
   version "3.7.1"
-  resolved "https://registry.yarnpkg.com/@lingui/babel-plugin-extract-messages/-/babel-plugin-extract-messages-3.7.1.tgz#320d09aafa8874299765055b790b6f4e3fa2646b"
+  resolved "https://registry.yarnpkg.com/@translation/babel-plugin-extract-messages/-/babel-plugin-extract-messages-3.7.1.tgz#320d09aafa8874299765055b790b6f4e3fa2646b"
   integrity sha512-9U4sdsF6NWUcITkcms3lpgAwqWWmsqZA4XGX3jMwQL0axq2zNTOKIlZmyzOtiteuLcOA8sb4KkrRhz7N09n7UQ==
   dependencies:
     "@babel/generator" "^7.11.6"
     "@babel/runtime" "^7.11.2"
-    "@lingui/conf" "^3.7.1"
+    "@translation/conf" "^3.7.1"
     mkdirp "^1.0.4"
 
-"@lingui/cli@^3.7.1", "@lingui/cli@latest":
+"@translation/cli@^3.7.1", "@translation/cli@latest":
   version "3.7.1"
-  resolved "https://registry.yarnpkg.com/@lingui/cli/-/cli-3.7.1.tgz#ce60aa4a2e6982c8dbed415b03d27a2de7c2dfbd"
+  resolved "https://registry.yarnpkg.com/@translation/cli/-/cli-3.7.1.tgz#ce60aa4a2e6982c8dbed415b03d27a2de7c2dfbd"
   integrity sha512-PMSJVK9URfop0+y4wxRs8XwIdNW2StjgqOVogBL5qxDdNZinGz5wUoVU/CNzgM3BAz6HaVm2ZGwIDa7j2s6VSA==
   dependencies:
     "@babel/generator" "^7.11.6"
@@ -1438,8 +1438,8 @@
     "@babel/plugin-syntax-jsx" "^7.10.4"
     "@babel/runtime" "^7.11.2"
     "@babel/types" "^7.11.5"
-    "@lingui/babel-plugin-extract-messages" "^3.7.1"
-    "@lingui/conf" "^3.7.1"
+    "@translation/babel-plugin-extract-messages" "^3.7.1"
+    "@translation/conf" "^3.7.1"
     babel-plugin-macros "^2.8.0"
     bcp-47 "^1.0.7"
     chalk "^4.1.0"
@@ -1465,9 +1465,9 @@
     pseudolocale "^1.1.0"
     ramda "^0.27.1"
 
-"@lingui/conf@^3.7.1":
+"@translation/conf@^3.7.1":
   version "3.7.1"
-  resolved "https://registry.yarnpkg.com/@lingui/conf/-/conf-3.7.1.tgz#14679e246a07d2822656d73e897bf96944510328"
+  resolved "https://registry.yarnpkg.com/@translation/conf/-/conf-3.7.1.tgz#14679e246a07d2822656d73e897bf96944510328"
   integrity sha512-D80MjeLdV2YN+Nti4+hOh0qWhgZZa10iosKLpdXVxVrC9MCGa3XxPcaeK2EaRlbjgCCMmDZHghzKA7WOg67EkQ==
   dependencies:
     "@babel/runtime" "^7.11.2"
@@ -1477,42 +1477,42 @@
     jest-validate "^26.5.2"
     lodash.get "^4.4.2"
 
-"@lingui/core@^3.7.1":
+"@translation/core@^3.7.1":
   version "3.7.1"
-  resolved "https://registry.yarnpkg.com/@lingui/core/-/core-3.7.1.tgz#c67b6aee648ee226742d77fe0214383e16672b91"
+  resolved "https://registry.yarnpkg.com/@translation/core/-/core-3.7.1.tgz#c67b6aee648ee226742d77fe0214383e16672b91"
   integrity sha512-VJeyjVTvgc3FcILIGBtu0m4CxIqw9cHAU93dCN7wlI074hn+KtZZxI47pzViRqmpDknLcriZ5Ua7GqP3IpHadA==
   dependencies:
     "@babel/runtime" "^7.11.2"
     make-plural "^6.2.2"
     messageformat-parser "^4.1.3"
 
-"@lingui/loader@latest":
+"@translation/loader@latest":
   version "3.7.1"
-  resolved "https://registry.yarnpkg.com/@lingui/loader/-/loader-3.7.1.tgz#3f65c89cfbce717d0e14d6cc973ef7d9cd247f5a"
+  resolved "https://registry.yarnpkg.com/@translation/loader/-/loader-3.7.1.tgz#3f65c89cfbce717d0e14d6cc973ef7d9cd247f5a"
   integrity sha512-hsFnaI3pnBDqj8JEwGKXcU2bGYesM7STaNcDnVNazfw2j2lGTxP6yeQdA7mVeTXq+DzEa6jr7ksqYTuzRBLLlA==
   dependencies:
     "@babel/runtime" "^7.11.2"
-    "@lingui/cli" "^3.7.1"
-    "@lingui/conf" "^3.7.1"
+    "@translation/cli" "^3.7.1"
+    "@translation/conf" "^3.7.1"
     loader-utils "^2.0.0"
     ramda "^0.27.1"
 
-"@lingui/macro@latest":
+"@translation/macro@latest":
   version "3.7.1"
-  resolved "https://registry.yarnpkg.com/@lingui/macro/-/macro-3.7.1.tgz#6d9d0c262e2841f4f329c9a31ec897f4d2fb0964"
+  resolved "https://registry.yarnpkg.com/@translation/macro/-/macro-3.7.1.tgz#6d9d0c262e2841f4f329c9a31ec897f4d2fb0964"
   integrity sha512-dQ5TIshKbDFoLkCdQZIGgZkwYmEjKrBi7toMtt1j2BF3sPkijFGa0eFKHZA/2QEbx/uqwv8TbzqpJ3OH7JTDSg==
   dependencies:
     "@babel/runtime" "^7.11.2"
-    "@lingui/conf" "^3.7.1"
+    "@translation/conf" "^3.7.1"
     ramda "^0.27.1"
 
-"@lingui/react@latest":
+"@translation/react@latest":
   version "3.7.1"
-  resolved "https://registry.yarnpkg.com/@lingui/react/-/react-3.7.1.tgz#4f71ef7082405c90534ba8ea02284c9f5102401d"
+  resolved "https://registry.yarnpkg.com/@translation/react/-/react-3.7.1.tgz#4f71ef7082405c90534ba8ea02284c9f5102401d"
   integrity sha512-ZXs4RdJdfMAXBwxxZrw/Ytts6YqTSIR3VTbQ04yqPFmCBp1f1gsz4ejrN7oHhgrCiNImbT7UNK+byn2NnfbhVA==
   dependencies:
     "@babel/runtime" "^7.11.2"
-    "@lingui/core" "^3.7.1"
+    "@translation/core" "^3.7.1"
 
 "@nodelib/fs.scandir@2.1.3":
   version "2.1.3"

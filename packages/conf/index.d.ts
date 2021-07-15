@@ -98,7 +98,7 @@ export declare function fallbackLanguageMigration(config: LinguiConfig & Depreca
 /**
  * Replace localeDir, srcPathDirs and srcPathIgnorePatterns with catalogs
  *
- * Released in @lingui/conf 3.0
+ * Released in @translation/conf 3.0
  * Remove anytime after 4.x
  */
 declare type DeprecatedLocaleDir = {

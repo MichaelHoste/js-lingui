@@ -1,4 +1,4 @@
-import { mockConsole } from "@lingui/jest-mocks"
+import { mockConsole } from "@translation/jest-mocks"
 import { helpMisspelledCommand } from "./utils"
 
 function getConsoleMockCalls({ mock }) {

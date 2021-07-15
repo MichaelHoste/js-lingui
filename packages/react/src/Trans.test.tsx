@@ -1,7 +1,7 @@
 import * as React from "react"
 import { render } from "@testing-library/react"
-import { Trans, I18nProvider } from "@lingui/react"
-import { setupI18n } from "@lingui/core"
+import { Trans, I18nProvider } from "@translation/react"
+import { setupI18n } from "@translation/core"
 
 describe("Trans component", function () {
   /*

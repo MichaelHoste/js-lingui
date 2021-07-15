@@ -1,6 +1,6 @@
 "use strict";
 
-var _core = require("@lingui/core");
+var _core = require("@translation/core");
 
 function scoped(foo) {
   if (foo) {

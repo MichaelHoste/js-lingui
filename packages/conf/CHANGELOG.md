@@ -5,7 +5,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [3.8.2](https://github.com/lingui/js-lingui/compare/v3.8.1...v3.8.2) (2021-03-31)
 
-**Note:** Version bump only for package @lingui/conf
+**Note:** Version bump only for package @translation/conf
 
 
 
@@ -35,7 +35,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [3.7.2](https://github.com/lingui/js-lingui/compare/v3.7.1...v3.7.2) (2021-03-14)
 
-**Note:** Version bump only for package @lingui/conf
+**Note:** Version bump only for package @translation/conf
 
 
 
@@ -43,7 +43,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [3.7.1](https://github.com/lingui/js-lingui/compare/v3.7.0...v3.7.1) (2021-03-07)
 
-**Note:** Version bump only for package @lingui/conf
+**Note:** Version bump only for package @translation/conf
 
 
 
@@ -51,7 +51,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [3.7.0](https://github.com/lingui/js-lingui/compare/v3.6.0...v3.7.0) (2021-03-04)
 
-**Note:** Version bump only for package @lingui/conf
+**Note:** Version bump only for package @translation/conf
 
 
 
@@ -59,7 +59,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [3.6.0](https://github.com/lingui/js-lingui/compare/v3.5.1...v3.6.0) (2021-02-23)
 
-**Note:** Version bump only for package @lingui/conf
+**Note:** Version bump only for package @translation/conf
 
 
 
@@ -81,7 +81,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* @lingui/conf lodash.get dependency ([#950](https://github.com/lingui/js-lingui/issues/950)) ([f7b59ab](https://github.com/lingui/js-lingui/commit/f7b59abbcfc8bd797478a549641ca9e3b97a9701))
+* @translation/conf lodash.get dependency ([#950](https://github.com/lingui/js-lingui/issues/950)) ([f7b59ab](https://github.com/lingui/js-lingui/commit/f7b59abbcfc8bd797478a549641ca9e3b97a9701))
 
 
 
@@ -119,7 +119,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [3.2.3](https://github.com/lingui/js-lingui/compare/v3.2.2...v3.2.3) (2020-11-22)
 
-**Note:** Version bump only for package @lingui/conf
+**Note:** Version bump only for package @translation/conf
 
 
 
@@ -138,7 +138,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [3.2.0](https://github.com/lingui/js-lingui/compare/v3.1.0...v3.2.0) (2020-11-12)
 
-**Note:** Version bump only for package @lingui/conf
+**Note:** Version bump only for package @translation/conf
 
 
 

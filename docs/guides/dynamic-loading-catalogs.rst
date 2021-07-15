@@ -54,7 +54,7 @@ Here's the full source of ``i18n.ts`` logic:
 
 .. code-block:: jsx
 
-  import { i18n } from '@lingui/core';
+  import { i18n } from '@translation/core';
   import { en, cs } from 'make-plural/plurals'
 
   export const locales = {
@@ -86,8 +86,8 @@ Here's the full source of ``i18n.ts`` logic:
   import React, { useEffect } from 'react';
   import App from './App';
 
-  import { I18nProvider } from '@lingui/react';
-  import { i18n } from '@lingui/core';
+  import { I18nProvider } from '@translation/react';
+  import { i18n } from '@translation/core';
   import { defaultLocale, dynamicActivate } from './i18n';
 
   const I18nApp = () => {

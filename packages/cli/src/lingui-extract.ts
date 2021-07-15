@@ -2,7 +2,7 @@ import chalk from "chalk"
 import chokidar from "chokidar"
 import program from "commander"
 
-import { getConfig, LinguiConfig } from "@lingui/conf"
+import { getConfig, LinguiConfig } from "@translation/conf"
 
 import { AllCatalogsType, getCatalogs } from "./api/catalog"
 import { printStats } from "./api/stats"

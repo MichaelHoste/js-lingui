@@ -12,32 +12,32 @@ This setup guide is for any project which uses React.
 Install
 =======
 
-1. Install ``@lingui/cli``, ``@lingui/macro``, `babel-plugin-macros` and Babel core
-   packages as a development dependencies and ``@lingui/react`` as a runtime dependency.
+1. Install ``@translation/cli``, ``@translation/macro``, `babel-plugin-macros` and Babel core
+   packages as a development dependencies and ``@translation/react`` as a runtime dependency.
 
    .. code-block:: shell
 
-      npm install --save-dev @lingui/cli @babel/core
-      npm install --save-dev @lingui/macro babel-plugin-macros  # required for macros
-      npm install --save @lingui/react
+      npm install --save-dev @translation/cli @babel/core
+      npm install --save-dev @translation/macro babel-plugin-macros  # required for macros
+      npm install --save @translation/react
 
       # or using Yarn
-      yarn add --dev @lingui/cli @babel/core
-      yarn add --dev @lingui/macro babel-plugin-macros  # required for macros
-      yarn add @lingui/react
+      yarn add --dev @translation/cli @babel/core
+      yarn add --dev @translation/macro babel-plugin-macros  # required for macros
+      yarn add @translation/react
 
    In case you get errors with ``import/no-extraneous-dependencies`` eslint rule feel free to add the dependencies as non-dev
 
    .. code-block:: shell
 
-      npm install --save-dev @lingui/cli @babel/core
+      npm install --save-dev @translation/cli @babel/core
       npm install --save-dev babel-plugin-macros  # required for macros
-      npm install --save @lingui/macro @lingui/react
+      npm install --save @translation/macro @translation/react
 
       # or using Yarn
-      yarn add --dev @lingui/cli @babel/core
+      yarn add --dev @translation/cli @babel/core
       yarn add --dev babel-plugin-macros  # required for macros
-      yarn add @lingui/macro @lingui/react
+      yarn add @translation/macro @translation/react
 
 2. Add ``macros`` plugin to Babel config (e.g: ``.babelrc``):
 

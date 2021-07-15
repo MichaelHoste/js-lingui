@@ -6,7 +6,7 @@ Lingui supports typescript types out of the box since version ``3.0.0``. Feel fr
 
 Webpack setup
 =============
-The ability of lingui to support the intuitive syntax comes from the ``@lingui/babel-preset-react`` Babel transformation. The preset consist of 2 plugins, namely ``@lingui/babel-plugin-transform-js`` and ``@lingui/babel-plugin-transform-react``. The plugins perform transformation only on the JSX and tagged template literals. Thus, the JSX and tagged template literals *must not* be transpiled before the 2 plugins get to do their magic to process the intuitive syntax.
+The ability of lingui to support the intuitive syntax comes from the ``@translation/babel-preset-react`` Babel transformation. The preset consist of 2 plugins, namely ``@translation/babel-plugin-transform-js`` and ``@translation/babel-plugin-transform-react``. The plugins perform transformation only on the JSX and tagged template literals. Thus, the JSX and tagged template literals *must not* be transpiled before the 2 plugins get to do their magic to process the intuitive syntax.
 
 In order to preserve JSX and tagged template literals for the lingui plugins, you must set the following in your ``tsconfig.json``.
 
@@ -19,7 +19,7 @@ In order to preserve JSX and tagged template literals for the lingui plugins, yo
     }
   }
 
-For lingui 2.0+, install ``babel-loader``, ``babel-preset-react``, ``babel-preset-env``, ``@lingui/babel-preset-react``. Use the presets by changing your ``.babelrc`` to the following. The order of the preset is important.
+For lingui 2.0+, install ``babel-loader``, ``babel-preset-react``, ``babel-preset-env``, ``@translation/babel-preset-react``. Use the presets by changing your ``.babelrc`` to the following. The order of the preset is important.
 
 .. code:: js
 
@@ -27,7 +27,7 @@ For lingui 2.0+, install ``babel-loader``, ``babel-preset-react``, ``babel-prese
     "presets": [
       "babel-preset-env",
       "babel-preset-react",
-      "@lingui/babel-preset-react"
+      "@translation/babel-preset-react"
     ]
   }
 
@@ -69,8 +69,8 @@ Macros types in non-React environments
 Since the opening of this issue we investigated that macros can be used on Typescript environments where React isn't required.
 
 Now we're shipping two declaration types:
-  - ``index.d.ts`` files with ``@lingui/core``, ``@lingui/react`` and ``react`` as peerDependencies.
-  - ``global.d.ts`` files with just ``@lingui/core`` as peerDependencies.
+  - ``index.d.ts`` files with ``@translation/core``, ``@translation/react`` and ``react`` as peerDependencies.
+  - ``global.d.ts`` files with just ``@translation/core`` as peerDependencies.
 
 Now you can modify your ``tsconfig.json`` in your root directory and reference the global file:
 
@@ -79,7 +79,7 @@ Now you can modify your ``tsconfig.json`` in your root directory and reference t
   {
     "compilerOptions": {
       "types": [
-        "./node_modules/@lingui/macro/global",
+        "./node_modules/@translation/macro/global",
       ]
     }
   }
@@ -92,15 +92,15 @@ Since version ``3.0.0`` types are already inside ``@lingui`` modules, so you don
 
 **For earlier versions**:
 
-`Jeow Li Huan <https://github.com/huan086>`_ wrote type definition for ``@lingui/core``
-and ``@lingui/react``:
+`Jeow Li Huan <https://github.com/huan086>`_ wrote type definition for ``@translation/core``
+and ``@translation/react``:
 
 The type definitions requires Typescript 2.8 or later.
 
 .. code-block:: shell
 
-   npm install --save-dev @types/lingui__core  # types for @lingui/core
-   npm install --save-dev @types/lingui__react  # types for @lingui/react
-   npm install --save-dev @types/lingui__macro  # types for @lingui/macro
+   npm install --save-dev @types/lingui__core  # types for @translation/core
+   npm install --save-dev @types/lingui__react  # types for @translation/react
+   npm install --save-dev @types/lingui__macro  # types for @translation/macro
 
 Please report any issues in `maintainers repo <https://github.com/huan086/lingui-typings>`_.

@@ -1,6 +1,6 @@
 import type { ReactElement, ComponentType, ReactNode } from "react"
-import type { MessageDescriptor } from "@lingui/core"
-import type { TransRenderProps } from "@lingui/react"
+import type { MessageDescriptor } from "@translation/core"
+import type { TransRenderProps } from "@translation/react"
 
 export function t(
   literals: TemplateStringsArray | MessageDescriptor,

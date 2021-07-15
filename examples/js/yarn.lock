@@ -1301,19 +1301,19 @@
     "@types/yargs" "^15.0.0"
     chalk "^4.0.0"
 
-"@lingui/babel-plugin-extract-messages@^3.5.1":
+"@translation/babel-plugin-extract-messages@^3.5.1":
   version "3.5.1"
-  resolved "https://registry.yarnpkg.com/@lingui/babel-plugin-extract-messages/-/babel-plugin-extract-messages-3.5.1.tgz#998ecb93bd07ef2980ae815eb42e1729926eb4f7"
+  resolved "https://registry.yarnpkg.com/@translation/babel-plugin-extract-messages/-/babel-plugin-extract-messages-3.5.1.tgz#998ecb93bd07ef2980ae815eb42e1729926eb4f7"
   integrity sha512-uPMEbe5r3Zj3KVd6XTln8LTUik+lavsrf18FssiiuGNg7c0QoihsO2xnJjONSdpM30yVwZGLO1nhM/lEB08XcQ==
   dependencies:
     "@babel/generator" "^7.11.6"
     "@babel/runtime" "^7.11.2"
-    "@lingui/conf" "^3.5.1"
+    "@translation/conf" "^3.5.1"
     mkdirp "^1.0.4"
 
-"@lingui/cli@^3.5.1":
+"@translation/cli@^3.5.1":
   version "3.5.1"
-  resolved "https://registry.yarnpkg.com/@lingui/cli/-/cli-3.5.1.tgz#e2ac505358663214e608368cc22686c13f0764d0"
+  resolved "https://registry.yarnpkg.com/@translation/cli/-/cli-3.5.1.tgz#e2ac505358663214e608368cc22686c13f0764d0"
   integrity sha512-34CieHCMgVgZqzR0mgw/ZD6zJ7I/HwloCgoKJGFd2IT53PusG89e8I5OvvlhnTL1sQhTPqABpBR+iu6LywGleQ==
   dependencies:
     "@babel/generator" "^7.11.6"
@@ -1321,8 +1321,8 @@
     "@babel/plugin-syntax-jsx" "^7.10.4"
     "@babel/runtime" "^7.11.2"
     "@babel/types" "^7.11.5"
-    "@lingui/babel-plugin-extract-messages" "^3.5.1"
-    "@lingui/conf" "^3.5.1"
+    "@translation/babel-plugin-extract-messages" "^3.5.1"
+    "@translation/conf" "^3.5.1"
     babel-plugin-macros "^2.8.0"
     bcp-47 "^1.0.7"
     chalk "^4.1.0"
@@ -1346,9 +1346,9 @@
     pseudolocale "^1.1.0"
     ramda "^0.27.1"
 
-"@lingui/conf@^3.5.1":
+"@translation/conf@^3.5.1":
   version "3.5.1"
-  resolved "https://registry.yarnpkg.com/@lingui/conf/-/conf-3.5.1.tgz#3d9ff58d4881a08f3bb2e42b06e86e926d568281"
+  resolved "https://registry.yarnpkg.com/@translation/conf/-/conf-3.5.1.tgz#3d9ff58d4881a08f3bb2e42b06e86e926d568281"
   integrity sha512-N8LfbgJUFSBFTC85+BhmbZ2B+N3a4wTPjhJxohE4n8T/mA0LnxVkC1ldgZxZG6IKYxb2D9acxyLTxTh064Kr9A==
   dependencies:
     "@babel/runtime" "^7.11.2"
@@ -1358,22 +1358,22 @@
     jest-validate "^26.5.2"
     lodash.get "^4.4.2"
 
-"@lingui/core@^3.5.1":
+"@translation/core@^3.5.1":
   version "3.5.1"
-  resolved "https://registry.yarnpkg.com/@lingui/core/-/core-3.5.1.tgz#c84c12691dcd0b8586e0735375c6d8fdc4ddab51"
+  resolved "https://registry.yarnpkg.com/@translation/core/-/core-3.5.1.tgz#c84c12691dcd0b8586e0735375c6d8fdc4ddab51"
   integrity sha512-/YtTQs/3IQtEWVCFTHubPwnn3+nQa5Jn+ygEDimDZpUSQo5gZXbtcLHf/NcnUw3t+5TAbxOf11DzMfNExDEzfQ==
   dependencies:
     "@babel/runtime" "^7.11.2"
     make-plural "^6.2.2"
     messageformat-parser "^4.1.3"
 
-"@lingui/macro@^3.5.1":
+"@translation/macro@^3.5.1":
   version "3.5.1"
-  resolved "https://registry.yarnpkg.com/@lingui/macro/-/macro-3.5.1.tgz#130b6b56982fc8ae63bd534651137b61a1b32f97"
+  resolved "https://registry.yarnpkg.com/@translation/macro/-/macro-3.5.1.tgz#130b6b56982fc8ae63bd534651137b61a1b32f97"
   integrity sha512-hLMCcA4ocBsemjCJFPQnW43jDvSv8xOovIDzcjh1dFQP5EjdRGyJRjmqaC3d3v3b8LpdUKN//EChLAF/dwwGrw==
   dependencies:
     "@babel/runtime" "^7.11.2"
-    "@lingui/conf" "^3.5.1"
+    "@translation/conf" "^3.5.1"
     ramda "^0.27.1"
 
 "@sinonjs/commons@^1.7.0":

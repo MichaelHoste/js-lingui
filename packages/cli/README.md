@@ -2,20 +2,20 @@
 [![Version][badge-version]][package]
 [![Downloads][badge-downloads]][package]
 
-# @lingui/cli
+# @translation/cli
 
 > lingui command line library for manipulating message catalogues
 
-`@lingui/cli` is part of [LinguiJS][linguijs]. See the [documentation][documentation] for all information, tutorials and examples.
+`@translation/cli` is part of [LinguiJS][linguijs]. See the [documentation][documentation] for all information, tutorials and examples.
 
 ## Installation
 
 The library can be installed globally or locally using `yarn` or `npm`. The recommended way is installing the package locally. This ensures that everyone who uses the project has the same version and does not need to install additional packages.
 
 ```
-npm install --save-dev @lingui/cli
+npm install --save-dev @translation/cli
 # or using yarn
-yarn add --dev @lingui/cli
+yarn add --dev @translation/cli
 ```
 
 To run the library locally there are three options, with the first one been recommended one.
@@ -71,7 +71,7 @@ This package is licensed under [MIT][license] license.
 [documentation]: https://lingui.js.org/
 [tutorial]: https://lingui.js.org/tutorials/cli.html
 [reference]: https://lingui.js.org/ref/cli.html
-[package]: https://www.npmjs.com/package/@lingui/cli
-[badge-downloads]: https://img.shields.io/npm/dw/@lingui/cli.svg
-[badge-version]: https://img.shields.io/npm/v/@lingui/cli.svg
-[badge-license]: https://img.shields.io/npm/l/@lingui/cli.svg
+[package]: https://www.npmjs.com/package/@translation/cli
+[badge-downloads]: https://img.shields.io/npm/dw/@translation/cli.svg
+[badge-version]: https://img.shields.io/npm/v/@translation/cli.svg
+[badge-license]: https://img.shields.io/npm/l/@translation/cli.svg

@@ -10,53 +10,53 @@ const bundleTypes = {
 const bundles = [
   {
     type: bundleTypes.UNIVERSAL,
-    entry: "@lingui/core",
+    entry: "@translation/core",
     externals: []
   },
 
   {
     type: bundleTypes.UNIVERSAL,
-    entry: "@lingui/core",
+    entry: "@translation/core",
     label: "dev",
     externals: []
   },
 
   {
     type: bundleTypes.UNIVERSAL,
-    entry: "@lingui/react",
-    externals: ["@lingui/core"]
+    entry: "@translation/react",
+    externals: ["@translation/core"]
   },
   {
     type: bundleTypes.UNIVERSAL,
-    entry: "@lingui/detect-locale",
+    entry: "@translation/detect-locale",
   },
   {
     type: bundleTypes.NODE,
-    entry: "@lingui/babel-plugin-extract-messages"
+    entry: "@translation/babel-plugin-extract-messages"
   },
   {
     type: bundleTypes.NODE,
-    entry: "@lingui/snowpack-plugin"
-  },
-
-  {
-    type: bundleTypes.NODE,
-    entry: "@lingui/macro"
+    entry: "@translation/snowpack-plugin"
   },
 
   {
     type: bundleTypes.NODE,
-    entry: "@lingui/cli"
+    entry: "@translation/macro"
   },
 
   {
     type: bundleTypes.NODE,
-    entry: "@lingui/conf"
+    entry: "@translation/cli"
   },
 
   {
     type: bundleTypes.NODE,
-    entry: "@lingui/loader"
+    entry: "@translation/conf"
+  },
+
+  {
+    type: bundleTypes.NODE,
+    entry: "@translation/loader"
   }
 ]
 

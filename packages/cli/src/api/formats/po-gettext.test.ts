@@ -1,4 +1,4 @@
-import { mockConsole } from "@lingui/jest-mocks"
+import { mockConsole } from "@translation/jest-mocks"
 import fs from "fs"
 import mockFs from "mock-fs"
 import mockDate from "mockdate"

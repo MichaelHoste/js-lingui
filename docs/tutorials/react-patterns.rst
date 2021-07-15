@@ -17,7 +17,7 @@ React components:
 
 .. code-block:: jsx
 
-   import { Trans } from "@lingui/macro"
+   import { Trans } from "@translation/macro"
 
    <h1><Trans>LinguiJS example</Trans></h1>
 
@@ -44,7 +44,7 @@ In the following example, message ``Image caption`` will be extracted and used a
 
 .. code-block:: jsx
 
-   import { t } from "@lingui/macro"
+   import { t } from "@translation/macro"
 
    export default function ImageWithCaption() {
       return <img src="..." alt={t`Image caption`} />
@@ -60,7 +60,7 @@ If you're using custom IDs in your project, add ``id`` prop to i18n components:
 
 .. code-block:: jsx
 
-   import { Trans } from "@lingui/macro"
+   import { Trans } from "@translation/macro"
 
    <h1><Trans id="msg.header">LinguiJS example</Trans></h1>
 
@@ -77,7 +77,7 @@ object and pass ID as ``id`` prop:
 
 .. code-block:: jsx
 
-   import { t } from "@lingui/macro"
+   import { t } from "@translation/macro"
 
    export default function ImageWithCaption() {
       return <img src="..." alt={t({id: 'msg.caption', message: `Image caption`})} />
@@ -90,7 +90,7 @@ use them inside :jsmacro:`t` macro to pass ID (in this case, ``'msg.caption'``).
 
 .. code-block:: jsx
 
-   import { t, plural } from "@lingui/macro"
+   import { t, plural } from "@translation/macro"
 
    export default function ImageWithCaption({ count }) {
       return (
@@ -116,7 +116,7 @@ equivalent for :jsxmacro:`Trans`, :jsmacro:`plural` is equivalent to :jsxmacro:`
 
 .. code-block:: jsx
 
-   import { t } from "@lingui/macro"
+   import { t } from "@translation/macro"
 
    export default function ImageWithCaption() {
       return <img src="..." alt={t`Image caption`} />
@@ -132,7 +132,7 @@ as usual:
 
    .. code-block:: jsx
 
-      import { t } from "@lingui/macro"
+      import { t } from "@translation/macro"
 
       export function alert() {
          // use t as if you were inside a React component
@@ -149,7 +149,7 @@ translated string by passing its ``id`` to :jsxmacro:`Trans` as its ``id`` prop:
 
 .. code-block:: jsx
 
-   import { defineMessage, Trans } from "@lingui/macro"
+   import { defineMessage, Trans } from "@translation/macro"
 
    const favoriteColors = [
       defineMessage({message: "Red"}),
@@ -173,8 +173,8 @@ the :js:meth:`I18n._` method:
 
 .. code-block:: jsx
 
-   import { i18n } from '@lingui/core'
-   import { defineMessage } from "@lingui/macro"
+   import { i18n } from '@translation/core'
+   import { defineMessage } from "@translation/macro"
 
    const favoriteColors = [
       defineMessage({message: "Red"}),
@@ -198,7 +198,7 @@ element as the prop:
 
 .. code-block:: jsx
 
-   import { Trans } from "@lingui/macro"
+   import { Trans } from "@translation/macro"
 
    export default function FancyButton(props) {
       return <button>{props.label}</button>
@@ -216,7 +216,7 @@ a message tagged with the :jsmacro:`t` macro:
 
 .. code-block:: jsx
 
-   import { t } from "@lingui/macro"
+   import { t } from "@translation/macro"
 
    export default function ImageWithCaption(props) {
       return <img src="..." alt={props.caption} />
@@ -242,7 +242,7 @@ as needed with lazy translation:
 
 .. code-block:: jsx
 
-   import { defineMessage, Trans } from "@lingui/macro";
+   import { defineMessage, Trans } from "@translation/macro";
 
    const STATUS_OPEN = 1,
          STATUS_CLOSED = 2,

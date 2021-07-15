@@ -7,7 +7,7 @@ import glob from "glob"
 import micromatch from "micromatch"
 import normalize from "normalize-path"
 
-import { LinguiConfig, OrderBy, FallbackLocales } from "@lingui/conf"
+import { LinguiConfig, OrderBy, FallbackLocales } from "@translation/conf"
 
 import getFormat, { CatalogFormatter } from "./formats"
 import extract from "./extractors"

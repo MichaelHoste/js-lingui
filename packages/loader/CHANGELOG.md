@@ -5,7 +5,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [3.8.2](https://github.com/lingui/js-lingui/compare/v3.8.1...v3.8.2) (2021-03-31)
 
-**Note:** Version bump only for package @lingui/loader
+**Note:** Version bump only for package @translation/loader
 
 
 
@@ -13,7 +13,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [3.8.1](https://github.com/lingui/js-lingui/compare/v3.8.0...v3.8.1) (2021-03-23)
 
-**Note:** Version bump only for package @lingui/loader
+**Note:** Version bump only for package @translation/loader
 
 
 
@@ -21,7 +21,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [3.8.0](https://github.com/lingui/js-lingui/compare/v3.7.2...v3.8.0) (2021-03-23)
 
-**Note:** Version bump only for package @lingui/loader
+**Note:** Version bump only for package @translation/loader
 
 
 
@@ -32,7 +32,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* webpack 5 issue with jest @lingui/loader [#999](https://github.com/lingui/js-lingui/issues/999) ([9e68a8d](https://github.com/lingui/js-lingui/commit/9e68a8d1e6f3565f724dd027b165e85b1d891c92))
+* webpack 5 issue with jest @translation/loader [#999](https://github.com/lingui/js-lingui/issues/999) ([9e68a8d](https://github.com/lingui/js-lingui/commit/9e68a8d1e6f3565f724dd027b165e85b1d891c92))
 
 
 
@@ -40,7 +40,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [3.7.1](https://github.com/lingui/js-lingui/compare/v3.7.0...v3.7.1) (2021-03-07)
 
-**Note:** Version bump only for package @lingui/loader
+**Note:** Version bump only for package @translation/loader
 
 
 
@@ -48,7 +48,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [3.7.0](https://github.com/lingui/js-lingui/compare/v3.6.0...v3.7.0) (2021-03-04)
 
-**Note:** Version bump only for package @lingui/loader
+**Note:** Version bump only for package @translation/loader
 
 
 
@@ -56,7 +56,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [3.6.0](https://github.com/lingui/js-lingui/compare/v3.5.1...v3.6.0) (2021-02-23)
 
-**Note:** Version bump only for package @lingui/loader
+**Note:** Version bump only for package @translation/loader
 
 
 
@@ -67,7 +67,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **@lingui/loader:** accept webpack 5.x as a peer dependency ([#971](https://github.com/lingui/js-lingui/issues/971)) ([b9683cc](https://github.com/lingui/js-lingui/commit/b9683cc3f1274efab805d6143398d78fbb3310c5))
+* **@translation/loader:** accept webpack 5.x as a peer dependency ([#971](https://github.com/lingui/js-lingui/issues/971)) ([b9683cc](https://github.com/lingui/js-lingui/commit/b9683cc3f1274efab805d6143398d78fbb3310c5))
 
 
 
@@ -75,7 +75,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [3.5.0](https://github.com/lingui/js-lingui/compare/v3.4.0...v3.5.0) (2021-02-02)
 
-**Note:** Version bump only for package @lingui/loader
+**Note:** Version bump only for package @translation/loader
 
 
 
@@ -83,7 +83,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [3.4.0](https://github.com/lingui/js-lingui/compare/v3.3.0...v3.4.0) (2021-01-13)
 
-**Note:** Version bump only for package @lingui/loader
+**Note:** Version bump only for package @translation/loader
 
 
 
@@ -91,7 +91,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [3.3.0](https://github.com/lingui/js-lingui/compare/v3.2.3...v3.3.0) (2020-12-08)
 
-**Note:** Version bump only for package @lingui/loader
+**Note:** Version bump only for package @translation/loader
 
 
 
@@ -99,7 +99,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [3.2.3](https://github.com/lingui/js-lingui/compare/v3.2.2...v3.2.3) (2020-11-22)
 
-**Note:** Version bump only for package @lingui/loader
+**Note:** Version bump only for package @translation/loader
 
 
 
@@ -107,7 +107,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [3.2.2](https://github.com/lingui/js-lingui/compare/v3.2.1...v3.2.2) (2020-11-20)
 
-**Note:** Version bump only for package @lingui/loader
+**Note:** Version bump only for package @translation/loader
 
 
 
@@ -115,7 +115,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [3.2.0](https://github.com/lingui/js-lingui/compare/v3.1.0...v3.2.0) (2020-11-12)
 
-**Note:** Version bump only for package @lingui/loader
+**Note:** Version bump only for package @translation/loader
 
 
 
@@ -126,7 +126,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* mandatory ext on @lingui/loader ([#831](https://github.com/lingui/js-lingui/issues/831)) ([8979aaf](https://github.com/lingui/js-lingui/commit/8979aaf81e5f839a8406d3ac7516205113944c39))
+* mandatory ext on @translation/loader ([#831](https://github.com/lingui/js-lingui/issues/831)) ([8979aaf](https://github.com/lingui/js-lingui/commit/8979aaf81e5f839a8406d3ac7516205113944c39))
 
 
 ### Features

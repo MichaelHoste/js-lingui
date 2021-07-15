@@ -1,5 +1,5 @@
 {
-  "name": "@lingui/react",
+  "name": "@translation/react",
   "version": "3.8.2",
   "description": "React components for translations",
   "main": "index.js",
@@ -42,7 +42,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.11.2",
-    "@lingui/core": "^3.8.2"
+    "@translation/core": "^3.8.2"
   },
   "devDependencies": {
     "react-testing-library": "^8.0.1"

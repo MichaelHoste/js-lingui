@@ -1,7 +1,7 @@
 import chalk from "chalk"
 import program from "commander"
 
-import { getConfig, LinguiConfig } from "@lingui/conf"
+import { getConfig, LinguiConfig } from "@translation/conf"
 
 import { getCatalogs } from "./api/catalog"
 import { detect } from "./api/detect"

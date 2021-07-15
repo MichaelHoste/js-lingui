@@ -2,14 +2,14 @@ export default [
   {
     name: "Macro is used in expression assignment",
     input: `
-        import { plural } from '@lingui/macro'
+        import { plural } from '@translation/macro'
         const a = plural(count, {
           "one": \`# book\`,
           other: "# books"
         });
       `,
     expected: `
-        import { i18n } from "@lingui/core";
+        import { i18n } from "@translation/core";
         const a = 
           /*i18n*/
           i18n._("{count, plural, one {# book} other {# books}}", {
@@ -20,7 +20,7 @@ export default [
   {
     name: "Macro with offset and exact matches",
     input: `
-        import { plural } from '@lingui/macro'
+        import { plural } from '@translation/macro'
         plural(users.length, {
           offset: 1,
           0: "No books",
@@ -29,7 +29,7 @@ export default [
         });
       `,
     expected: `
-        import { i18n } from "@lingui/core";
+        import { i18n } from "@translation/core";
         /*i18n*/
         i18n._("{0, plural, offset:1 =0 {No books} =1 {1 book} other {# books}}", {
           0: users.length

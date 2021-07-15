@@ -1,6 +1,6 @@
 import { EventEmitter } from "./eventEmitter"
 
-describe("@lingui/core/eventEmitter", () => {
+describe("@translation/core/eventEmitter", () => {
   it("should call registered event listeners on emit", async () => {
     const firstListener = jest.fn()
     const secondListener = jest.fn(() => "return value is ignored")

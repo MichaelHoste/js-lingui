@@ -1,4 +1,4 @@
-import { Select, Plural } from '@lingui/macro';
+import { Select, Plural } from '@translation/macro';
 
 <Select
   value={genderOfHost}

@@ -1,5 +1,5 @@
-import { i18n } from "@lingui/core"
-import { t, plural, defineMessage } from "@lingui/macro"
+import { i18n } from "@translation/core"
+import { t, plural, defineMessage } from "@translation/macro"
 import { en, cs } from "make-plural/plurals"
 
 i18n.loadLocaleData("en", { plurals: en })
@@ -28,7 +28,7 @@ export function getStatic() {
     defineMessage({
       id: "static",
       comment: "Title of example",
-      message: "@lingui/core example",
+      message: "@translation/core example",
     })
   )
 }

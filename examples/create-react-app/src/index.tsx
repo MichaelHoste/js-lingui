@@ -4,8 +4,8 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-import { i18n } from "@lingui/core";
-import { I18nProvider } from '@lingui/react'
+import { i18n } from "@translation/core";
+import { I18nProvider } from '@translation/react'
 import { defaultLocale, dynamicActivate } from './i18n';
 
 const I18nApp = () => {

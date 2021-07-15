@@ -11,7 +11,7 @@ A clear and concise description of what the bug is.
 Steps to reproduce the behavior, possibly with minimal code sample, e.g:
 
 ```
-import { Trans } from "@lingui/react"
+import { Trans } from "@translation/react"
 
 export default function App() {
    return <Trans>This should be translated!</Trans>

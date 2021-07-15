@@ -32,8 +32,8 @@ Clean and readable
    battle-tested and powerful **ICU MessageFormat** under the hood.
 
 Universal
-   Use it everywhere. :ref:`@lingui/core <ref-core>` provides the essential intl
-   functionality which works in any JavaScript project while :ref:`@lingui/react <ref-react>` offers
+   Use it everywhere. :ref:`@translation/core <ref-core>` provides the essential intl
+   functionality which works in any JavaScript project while :ref:`@translation/react <ref-react>` offers
    components to leverage React rendering.
 
 Full rich-text support
@@ -51,8 +51,8 @@ Unopinionated
    JSON or standard PO file, which is supported in almost all translation tools.
 
 Lightweight and optimized
-   Core library is only `1.9 kB gzipped <https://bundlephobia.com/result?p=@lingui/react>`_,
-   React components are additional `3.1 kBs gzipped <https://bundlephobia.com/result?p=@lingui/core>`_.
+   Core library is only `1.9 kB gzipped <https://bundlephobia.com/result?p=@translation/react>`_,
+   React components are additional `3.1 kBs gzipped <https://bundlephobia.com/result?p=@translation/core>`_.
    That's less than Redux for a full-featured intl library.
 
 Active community

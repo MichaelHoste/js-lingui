@@ -1,4 +1,4 @@
-import { t, defineMessage } from "@lingui/macro"
+import { t, defineMessage } from "@translation/macro"
 
 t`Message`
 

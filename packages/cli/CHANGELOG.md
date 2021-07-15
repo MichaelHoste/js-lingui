@@ -5,7 +5,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [3.8.2](https://github.com/lingui/js-lingui/compare/v3.8.1...v3.8.2) (2021-03-31)
 
-**Note:** Version bump only for package @lingui/cli
+**Note:** Version bump only for package @translation/cli
 
 
 
@@ -13,7 +13,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [3.8.1](https://github.com/lingui/js-lingui/compare/v3.8.0...v3.8.1) (2021-03-23)
 
-**Note:** Version bump only for package @lingui/cli
+**Note:** Version bump only for package @translation/cli
 
 
 
@@ -48,7 +48,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [3.7.1](https://github.com/lingui/js-lingui/compare/v3.7.0...v3.7.1) (2021-03-07)
 
-**Note:** Version bump only for package @lingui/cli
+**Note:** Version bump only for package @translation/cli
 
 
 
@@ -59,7 +59,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* @lingui/cli type error when catalog is missing ([#988](https://github.com/lingui/js-lingui/issues/988)) ([8c44af2](https://github.com/lingui/js-lingui/commit/8c44af2442f979ae60de8059e68436508cdc8f74))
+* @translation/cli type error when catalog is missing ([#988](https://github.com/lingui/js-lingui/issues/988)) ([8c44af2](https://github.com/lingui/js-lingui/commit/8c44af2442f979ae60de8059e68436508cdc8f74))
 * Report correct number of missing messages in strict mode ([#992](https://github.com/lingui/js-lingui/issues/992)) ([128f3e2](https://github.com/lingui/js-lingui/commit/128f3e237daef838e18e73818fc681609e4bc131))
 * use pkgUp.sync to localize package.json ([#985](https://github.com/lingui/js-lingui/issues/985)) ([18d985d](https://github.com/lingui/js-lingui/commit/18d985dd414276d07a1f7ffc7e21ffa5e0dadc36))
 
@@ -80,7 +80,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [3.5.1](https://github.com/lingui/js-lingui/compare/v3.5.0...v3.5.1) (2021-02-09)
 
-**Note:** Version bump only for package @lingui/cli
+**Note:** Version bump only for package @translation/cli
 
 
 
@@ -101,7 +101,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* Introduced @lingui/snowpack-plugin ([#947](https://github.com/lingui/js-lingui/issues/947)) ([96bd31b](https://github.com/lingui/js-lingui/commit/96bd31b54d5ebfa2e28c96e14ee92d43b4199ae5))
+* Introduced @translation/snowpack-plugin ([#947](https://github.com/lingui/js-lingui/issues/947)) ([96bd31b](https://github.com/lingui/js-lingui/commit/96bd31b54d5ebfa2e28c96e14ee92d43b4199ae5))
 
 
 
@@ -146,7 +146,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [3.2.3](https://github.com/lingui/js-lingui/compare/v3.2.2...v3.2.3) (2020-11-22)
 
-**Note:** Version bump only for package @lingui/cli
+**Note:** Version bump only for package @translation/cli
 
 
 

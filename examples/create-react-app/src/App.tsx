@@ -1,7 +1,7 @@
 import './App.css';
 import React, { useState } from 'react';
-import { Trans, Plural } from "@lingui/macro";
-import { i18n } from "@lingui/core";
+import { Trans, Plural } from "@translation/macro";
+import { i18n } from "@translation/core";
 
 import { locales, dynamicActivate } from './i18n';
 

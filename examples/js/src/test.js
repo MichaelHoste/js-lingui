@@ -1,4 +1,4 @@
-import { i18n } from "@lingui/core"
+import { i18n } from "@translation/core"
 
 describe("vanilla-js example", function () {
   describe("messages as ids", function () {
@@ -13,9 +13,9 @@ describe("vanilla-js example", function () {
 function test({ getStatic, getVariables, getPlural, getLazy }) {
   it("should translate static message", function () {
     i18n.activate("en")
-    expect(getStatic()).toEqual("@lingui/core example")
+    expect(getStatic()).toEqual("@translation/core example")
     i18n.activate("cs")
-    expect(getStatic()).toEqual("Ukázka @lingui/core")
+    expect(getStatic()).toEqual("Ukázka @translation/core")
   })
 
   it("should translate message with variables", function () {

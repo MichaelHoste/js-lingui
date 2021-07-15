@@ -44,7 +44,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ### Bug Fixes
 
 * lingui extract ignores custom directories as args [#998](https://github.com/lingui/js-lingui/issues/998) ([f426881](https://github.com/lingui/js-lingui/commit/f426881d2b6fb51de06ed43159f56b67a36e2ece))
-* webpack 5 issue with jest @lingui/loader [#999](https://github.com/lingui/js-lingui/issues/999) ([9e68a8d](https://github.com/lingui/js-lingui/commit/9e68a8d1e6f3565f724dd027b165e85b1d891c92))
+* webpack 5 issue with jest @translation/loader [#999](https://github.com/lingui/js-lingui/issues/999) ([9e68a8d](https://github.com/lingui/js-lingui/commit/9e68a8d1e6f3565f724dd027b165e85b1d891c92))
 
 
 
@@ -66,7 +66,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* @lingui/cli type error when catalog is missing ([#988](https://github.com/lingui/js-lingui/issues/988)) ([8c44af2](https://github.com/lingui/js-lingui/commit/8c44af2442f979ae60de8059e68436508cdc8f74))
+* @translation/cli type error when catalog is missing ([#988](https://github.com/lingui/js-lingui/issues/988)) ([8c44af2](https://github.com/lingui/js-lingui/commit/8c44af2442f979ae60de8059e68436508cdc8f74))
 * macro components should omit key prop [#994](https://github.com/lingui/js-lingui/issues/994) ([f2a4da0](https://github.com/lingui/js-lingui/commit/f2a4da08542567b77fc2ae8ebf9385f6d8055f6f))
 * Report correct number of missing messages in strict mode ([#992](https://github.com/lingui/js-lingui/issues/992)) ([128f3e2](https://github.com/lingui/js-lingui/commit/128f3e237daef838e18e73818fc681609e4bc131))
 * use pkgUp.sync to localize package.json ([#985](https://github.com/lingui/js-lingui/issues/985)) ([18d985d](https://github.com/lingui/js-lingui/commit/18d985dd414276d07a1f7ffc7e21ffa5e0dadc36))
@@ -97,9 +97,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* @lingui/macro types for global environments ([#973](https://github.com/lingui/js-lingui/issues/973)) ([92a5ce7](https://github.com/lingui/js-lingui/commit/92a5ce786d979d4bd0f65a50962fdb3bd27d91d7))
+* @translation/macro types for global environments ([#973](https://github.com/lingui/js-lingui/issues/973)) ([92a5ce7](https://github.com/lingui/js-lingui/commit/92a5ce786d979d4bd0f65a50962fdb3bd27d91d7))
 * runtimeConfigModule config validation ([#972](https://github.com/lingui/js-lingui/issues/972)) ([5656c95](https://github.com/lingui/js-lingui/commit/5656c95b8b2ecfdfe903a941918c60abe16e1691))
-* **@lingui/loader:** accept webpack 5.x as a peer dependency ([#971](https://github.com/lingui/js-lingui/issues/971)) ([b9683cc](https://github.com/lingui/js-lingui/commit/b9683cc3f1274efab805d6143398d78fbb3310c5))
+* **@translation/loader:** accept webpack 5.x as a peer dependency ([#971](https://github.com/lingui/js-lingui/issues/971)) ([b9683cc](https://github.com/lingui/js-lingui/commit/b9683cc3f1274efab805d6143398d78fbb3310c5))
 
 
 
@@ -110,7 +110,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* @lingui/conf lodash.get dependency ([#950](https://github.com/lingui/js-lingui/issues/950)) ([f7b59ab](https://github.com/lingui/js-lingui/commit/f7b59abbcfc8bd797478a549641ca9e3b97a9701))
+* @translation/conf lodash.get dependency ([#950](https://github.com/lingui/js-lingui/issues/950)) ([f7b59ab](https://github.com/lingui/js-lingui/commit/f7b59abbcfc8bd797478a549641ca9e3b97a9701))
 * Select /> pseudolocalization ([#961](https://github.com/lingui/js-lingui/issues/961)) ([f1e1a25](https://github.com/lingui/js-lingui/commit/f1e1a25acd654c9877147ce3f40bc827bc54987a))
 * I18nProvider defaultComponent typing ([#953](https://github.com/lingui/js-lingui/issues/953)) ([6b08dd3](https://github.com/lingui/js-lingui/commit/6b08dd309d1ac8e0a8dc081e097e69678e822eda))
 * message when translations are missing ([#964](https://github.com/lingui/js-lingui/issues/964)) ([14f24f2](https://github.com/lingui/js-lingui/commit/14f24f2725771dcea0793de146abc9b86ea88789))
@@ -123,7 +123,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* Introduced @lingui/snowpack-plugin ([#947](https://github.com/lingui/js-lingui/issues/947)) ([96bd31b](https://github.com/lingui/js-lingui/commit/96bd31b54d5ebfa2e28c96e14ee92d43b4199ae5))
+* Introduced @translation/snowpack-plugin ([#947](https://github.com/lingui/js-lingui/issues/947)) ([96bd31b](https://github.com/lingui/js-lingui/commit/96bd31b54d5ebfa2e28c96e14ee92d43b4199ae5))
 
 
 
@@ -180,7 +180,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* export TransRenderProps from @lingui/react ([#877](https://github.com/lingui/js-lingui/issues/877)) ([3db9d6b](https://github.com/lingui/js-lingui/commit/3db9d6b0bfe9edae99523cd706de6826f67184ad))
+* export TransRenderProps from @translation/react ([#877](https://github.com/lingui/js-lingui/issues/877)) ([3db9d6b](https://github.com/lingui/js-lingui/commit/3db9d6b0bfe9edae99523cd706de6826f67184ad))
 * omit i18n prop in withI18n typescript interface ([#879](https://github.com/lingui/js-lingui/issues/879)) ([5927d42](https://github.com/lingui/js-lingui/commit/5927d42b256d1adfb26ed03367e521bfc8f1e2e6))
 
 
@@ -229,7 +229,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 * ensure render of I18nProvider in async scenarios ([#839](https://github.com/lingui/js-lingui/issues/839)) ([cd2816a](https://github.com/lingui/js-lingui/commit/cd2816a3d847042029c9b29dfb420f2ff5ae02cc))
 * fix exit code on compile --strict errors ([#825](https://github.com/lingui/js-lingui/issues/825)) ([69a80e2](https://github.com/lingui/js-lingui/commit/69a80e2b0b5061c657e63835355207be199db692))
 * improved performance of formatters ([#818](https://github.com/lingui/js-lingui/issues/818)) ([22667ad](https://github.com/lingui/js-lingui/commit/22667adba5b07cc94abacff8e8b5f5b19202576c))
-* mandatory ext on @lingui/loader ([#831](https://github.com/lingui/js-lingui/issues/831)) ([8979aaf](https://github.com/lingui/js-lingui/commit/8979aaf81e5f839a8406d3ac7516205113944c39))
+* mandatory ext on @translation/loader ([#831](https://github.com/lingui/js-lingui/issues/831)) ([8979aaf](https://github.com/lingui/js-lingui/commit/8979aaf81e5f839a8406d3ac7516205113944c39))
 * show error when plurals aren't loaded ([#824](https://github.com/lingui/js-lingui/issues/824)) ([296b6a1](https://github.com/lingui/js-lingui/commit/296b6a1a1f332064f040cc987c4359411d307258))
 
 
@@ -264,7 +264,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* Minor fixes in @lingui/macro and @lingui/react types
+* Minor fixes in @translation/macro and @translation/react types
 
 <a name="3.0.1"></a>
 ## [3.0.1](https://github.com/lingui/js-lingui/compare/v3.0.0..v3.0.1) (2020-11-01)
@@ -354,7 +354,7 @@ See [migration guide](https://lingui.js.org/releases/migration-3.html) for a ful
 <a name="2.7.3"></a>
 ## [2.7.3](https://github.com/lingui/js-lingui/compare/v2.7.2...v2.7.3) (2019-01-28)
 
-- Export `@lingui/core/dev` subpackage.
+- Export `@translation/core/dev` subpackage.
 
 ### Bug Fixes
 
@@ -407,7 +407,7 @@ It's not mandatory to migrate to macro, but recommended.
 
 ### New Features
 
-* New package [`@lingui/macro`](https://www.npmjs.com/package/@lingui/macro) published ([#318](https://github.com/lingui/js-lingui/issues/318)).
+* New package [`@translation/macro`](https://www.npmjs.com/package/@translation/macro) published ([#318](https://github.com/lingui/js-lingui/issues/318)).
   Big thanks to [Matt Labrum](https://github.com/mlabrum) for initial implementation.
 * [Pseudolocalization](https://lingui.js.org/tutorials/cli.html#pseudolocalization)
   ([#309](https://github.com/lingui/js-lingui/issues/309)).
@@ -427,7 +427,7 @@ It's not mandatory to migrate to macro, but recommended.
 
 ### Bug Fixes
 
-* `@lingui/cli` - Remove opencollective dependency
+* `@translation/cli` - Remove opencollective dependency
 
 <a name="2.6.0"></a>
 ## [2.6.0](https://github.com/lingui/js-lingui/compare/v2.5.0...v2.6.0) (2018-08-31)
@@ -447,7 +447,7 @@ It's not mandatory to migrate to macro, but recommended.
 * Keep headers in PO format ([#294](https://github.com/lingui/js-lingui/issues/294)).
   Thanks to [Daniel K.](https://github.com/FredyC).
 * `lingui extract` - set default BABEL_ENV (required by `react-app` preset) ([#300](https://github.com/lingui/js-lingui/issues/300)).
-* Fix `@lingui/loader` compatibility with Webpack 4 ([#297](https://github.com/lingui/js-lingui/issues/297)).
+* Fix `@translation/loader` compatibility with Webpack 4 ([#297](https://github.com/lingui/js-lingui/issues/297)).
 * Fix [`I18n`](https://lingui.js.org/ref/react.html#i18n) render prop component to not
   unmount children component between renders ([#302](https://github.com/lingui/js-lingui/issues/302)).
 

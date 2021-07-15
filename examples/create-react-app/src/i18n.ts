@@ -1,4 +1,4 @@
-import { i18n } from "@lingui/core";
+import { i18n } from "@translation/core";
 import { en, cs } from 'make-plural/plurals'
 
 export const locales = {
@@ -17,7 +17,7 @@ i18n.loadLocaleData({
  * @param locale any locale string
  */
 export async function dynamicActivate(locale: string) {
-  const { messages } = await import(`@lingui/loader!./locales/${locale}/messages.po`)
+  const { messages } = await import(`@translation/loader!./locales/${locale}/messages.po`)
   i18n.load(locale, messages)
   i18n.activate(locale)
 }

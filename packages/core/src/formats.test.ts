@@ -1,6 +1,6 @@
 import { date, number } from "./formats"
 
-describe("@lingui/core/formats", () => {
+describe("@translation/core/formats", () => {
   it("number formatter is memoized", async () => {
     const firstRunt0 = performance.now()
     number("es", {})(10000)

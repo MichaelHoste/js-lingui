@@ -126,7 +126,7 @@ export default class MacroJs {
    * thing that happens is that any macros used in `message` property
    * are replaced with formatted message.
    *
-   * import { defineMessage, plural } from '@lingui/macro';
+   * import { defineMessage, plural } from '@translation/macro';
    * const message = defineMessage({
    *   id: "msg.id",
    *   comment: "Description",

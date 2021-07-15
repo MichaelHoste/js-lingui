@@ -2,77 +2,77 @@ export default [
   {
     name: "Generate ID from children",
     input: `
-        import { Trans } from '@lingui/macro';
+        import { Trans } from '@translation/macro';
         <Trans>Hello World</Trans>;
       `,
     expected: `
-        import { Trans } from "@lingui/react";
+        import { Trans } from "@translation/react";
         <Trans id="Hello World" />;
       `,
   },
   {
     name: "Generated ID is the same as custom one",
     input: `
-        import { Trans } from '@lingui/macro';
+        import { Trans } from '@translation/macro';
         <Trans id="Hello World">Hello World</Trans>;
       `,
     expected: `
-        import { Trans } from "@lingui/react";
+        import { Trans } from "@translation/react";
         <Trans id="Hello World" />;
       `,
   },
   {
     name: "Macro with custom ID (string literal)",
     input: `
-        import { Trans } from '@lingui/macro';
+        import { Trans } from '@translation/macro';
         <Trans id="msg.hello">Hello World</Trans>;
       `,
     expected: `
-        import { Trans } from "@lingui/react";
+        import { Trans } from "@translation/react";
         <Trans id="msg.hello" message="Hello World" />;
       `,
   },
   {
     name: "Macro with custom ID (literal expression)",
     input: `
-        import { Trans } from '@lingui/macro';
+        import { Trans } from '@translation/macro';
         <Trans id={"msg.hello"}>Hello World</Trans>;
       `,
     expected: `
-        import { Trans } from "@lingui/react";
+        import { Trans } from "@translation/react";
         <Trans id="msg.hello" message="Hello World" />;
       `,
   },
   {
     name: "Macro with custom ID (template expression)",
     input: `
-        import { Trans } from '@lingui/macro';
+        import { Trans } from '@translation/macro';
         <Trans id={\`msg.hello\`}>Hello World</Trans>;
       `,
     expected: `
-        import { Trans } from "@lingui/react";
+        import { Trans } from "@translation/react";
         <Trans id="msg.hello" message="Hello World" />;
       `,
   },
   {
     name: "Macro without children is noop",
     input: `
-        import { Trans } from '@lingui/macro';
+        import { Trans } from '@translation/macro';
         <Trans id={msg} />;
       `,
     expected: `
-        import { Trans } from "@lingui/react";
+        import { Trans } from "@translation/react";
         <Trans id={msg} />;
       `,
   },
   {
     name: "Variables are converted to named arguments",
     input: `
-        import { Trans } from '@lingui/macro';
+        import { Trans } from '@translation/macro';
         <Trans>Hi {yourName}, my name is {myName}</Trans>;
       `,
     expected: `
-        import { Trans } from "@lingui/react";
+        import { Trans } from "@translation/react";
         <Trans id="Hi {yourName}, my name is {myName}" values={{
           yourName: yourName,
           myName: myName,
@@ -82,11 +82,11 @@ export default [
   {
     name: "Variables are deduplicated",
     input: `
-        import { Trans } from '@lingui/macro';
+        import { Trans } from '@translation/macro';
         <Trans>{duplicate} variable {duplicate}</Trans>;
       `,
     expected: `
-        import { Trans } from "@lingui/react";
+        import { Trans } from "@translation/react";
         <Trans id="{duplicate} variable {duplicate}" values={{
           duplicate: duplicate
         }} />;
@@ -95,11 +95,11 @@ export default [
   {
     name: "Template literals as children",
     input: `
-        import { Trans } from '@lingui/macro';
+        import { Trans } from '@translation/macro';
         <Trans>{\`How much is \${expression}? \${count}\`}</Trans>;
       `,
     expected: `
-        import { Trans } from "@lingui/react";
+        import { Trans } from "@translation/react";
         <Trans id="How much is {expression}? {count}" values={{
           expression: expression,
           count: count
@@ -109,18 +109,18 @@ export default [
   {
     name: "Strings as children are preserved",
     input: `
-        import { Trans } from '@lingui/macro';
+        import { Trans } from '@translation/macro';
         <Trans>{"hello {count, plural, one {world} other {worlds}}"}</Trans>;
       `,
     expected: `
-        import { Trans } from "@lingui/react";
+        import { Trans } from "@translation/react";
         <Trans id="hello {count, plural, one {world} other {worlds}}" />;
       `,
   },
   {
     name: "Expressions are converted to positional arguments",
     input: `
-        import { Trans } from '@lingui/macro';
+        import { Trans } from '@translation/macro';
         <Trans>
           Property {props.name},
           function {random()},
@@ -131,7 +131,7 @@ export default [
         </Trans>;
       `,
     expected: `
-        import { Trans } from "@lingui/react";
+        import { Trans } from "@translation/react";
         <Trans id="Property {0}, function {1}, array {2}, constant {3}, object {4}, everything {5}" values={{
           0: props.name,
           1: random(),
@@ -145,7 +145,7 @@ export default [
   {
     name: "Elements are replaced with placeholders",
     input: `
-        import { Trans } from '@lingui/macro';
+        import { Trans } from '@translation/macro';
         <Trans>
           Hello <strong>World!</strong><br />
           <p>
@@ -155,7 +155,7 @@ export default [
         </Trans>;
       `,
     expected: `
-        import { Trans } from "@lingui/react";
+        import { Trans } from "@translation/react";
         <Trans id="Hello <0>World!</0><1/><2>My name is <3> <4>{name}</4></3></2>" values={{
           name: name
         }} components={{
@@ -170,11 +170,11 @@ export default [
   {
     name: "Elements inside expression container",
     input: `
-        import { Trans } from '@lingui/macro';
+        import { Trans } from '@translation/macro';
         <Trans>{<span>Component inside expression container</span>}</Trans>;
       `,
     expected: `
-        import { Trans } from "@lingui/react";
+        import { Trans } from "@translation/react";
         <Trans id="<0>Component inside expression container</0>" components={{
           0: <span />
         }} />;
@@ -183,11 +183,11 @@ export default [
   {
     name: "Elements without children",
     input: `
-        import { Trans } from '@lingui/macro';
+        import { Trans } from '@translation/macro';
         <Trans>{<br />}</Trans>;
       `,
     expected: `
-        import { Trans } from "@lingui/react";
+        import { Trans } from "@translation/react";
         <Trans id="<0/>" components={{
           0: <br />
         }} />;
@@ -196,11 +196,11 @@ export default [
   {
     name: "JSX spread child is noop",
     input: `
-        import { Trans } from '@lingui/macro';
+        import { Trans } from '@translation/macro';
         <Trans>{...spread}</Trans>
       `,
     expected: `
-        import { Trans } from "@lingui/react";
+        import { Trans } from "@translation/react";
         <Trans>{...spread}</Trans>
       `,
   },
@@ -208,11 +208,11 @@ export default [
     name: "Production - only essential props are kept",
     production: true,
     input: `
-        import { Trans } from '@lingui/macro';
+        import { Trans } from '@translation/macro';
         <Trans id="msg.hello" comment="Hello World">Hello World</Trans> 
       `,
     expected: `
-        import { Trans } from "@lingui/react";
+        import { Trans } from "@translation/react";
         <Trans id="msg.hello" />;
       `,
   },
@@ -221,19 +221,19 @@ export default [
     production: true,
     useTypescriptPreset: true,
     input: `
-        import { withI18nProps } from '@lingui/react'
-        import { Trans } from '@lingui/macro';
+        import { withI18nProps } from '@translation/react'
+        import { Trans } from '@translation/macro';
         <Trans id="msg.hello" comment="Hello World">Hello World</Trans>
       `,
     expected: `
-        import { withI18nProps, Trans } from "@lingui/react";
+        import { withI18nProps, Trans } from "@translation/react";
         <Trans id="msg.hello" />;
       `,
   },
   {
     name: "Strip whitespace around arguments",
     input: `
-        import { Trans } from "@lingui/macro";
+        import { Trans } from "@translation/macro";
         <Trans>
           Strip whitespace around arguments: '
           {name}
@@ -241,7 +241,7 @@ export default [
         </Trans>
       `,
     expected: `
-        import { Trans } from "@lingui/react";
+        import { Trans } from "@translation/react";
         <Trans id="Strip whitespace around arguments: '{name}'" values={{
           name: name
         }} />;
@@ -250,7 +250,7 @@ export default [
   {
     name: "Strip whitespace around tags but keep forced spaces",
     input: `
-        import { Trans } from "@lingui/macro";
+        import { Trans } from "@translation/macro";
         <Trans>
           Strip whitespace around tags, but keep{" "}
           <strong>forced spaces</strong>
@@ -258,7 +258,7 @@ export default [
         </Trans>
       `,
     expected: `
-        import { Trans } from "@lingui/react";
+        import { Trans } from "@translation/react";
         <Trans id="Strip whitespace around tags, but keep <0>forced spaces</0>!" components={{
           0: <strong />
         }} />;
@@ -267,21 +267,21 @@ export default [
   {
     name: "Keep forced newlines",
     input: `
-        import { Trans } from "@lingui/macro";
+        import { Trans } from "@translation/macro";
         <Trans>
           Keep forced{"\\n"}
           newlines!
         </Trans>
       `,
     expected: `
-        import { Trans } from "@lingui/react";
+        import { Trans } from "@translation/react";
         <Trans id="Keep forced\\n newlines!" />;
       `,
   },
   {
     name: "Keep multiple forced newlines",
     input: `
-        import { Trans } from "@lingui/macro";
+        import { Trans } from "@translation/macro";
         <Trans>
           Keep multiple{"\\n"}
           forced{"\\n"}
@@ -289,18 +289,18 @@ export default [
         </Trans>
       `,
     expected: `
-        import { Trans } from "@lingui/react";
+        import { Trans } from "@translation/react";
         <Trans id="Keep multiple\\n forced\\n newlines!" />;
       `,
   },
   {
     input: `
-        import { t, plural, Trans } from '@lingui/macro'
+        import { t, plural, Trans } from '@translation/macro'
         <Trans>Read <a href="/more" title={t\`Full content of \${articleName}\`}>more</a></Trans>
       `,
     expected: `
-        import { Trans } from "@lingui/react";
-        import { i18n } from "@lingui/core";
+        import { Trans } from "@translation/react";
+        import { i18n } from "@translation/core";
         <Trans id="Read <0>more</0>" components={{
           0: <a href="/more" title={
             /*i18n*/
@@ -313,14 +313,14 @@ export default [
   },
   {
     input: `
-        import { plural } from '@lingui/macro'
+        import { plural } from '@translation/macro'
         <a href="/about" title={plural(count, {
           one: "# book",
           other: "# books"
         })}>About</a>
       `,
     expected: `
-        import { i18n } from "@lingui/core";
+        import { i18n } from "@translation/core";
         <a href="/about" title={
           /*i18n*/
           i18n._("{count, plural, one {# book} other {# books}}", {
@@ -332,22 +332,22 @@ export default [
   {
     name: "Ignore JSXEmptyExpression",
     input: `
-        import { Trans } from '@lingui/macro';
+        import { Trans } from '@translation/macro';
         <Trans>Hello {/* and I cannot stress this enough */} World</Trans>;
       `,
     expected: `
-        import { Trans } from "@lingui/react";
+        import { Trans } from "@translation/react";
         <Trans id="Hello  World" />;
       `,
   },
   {
     name: "Use decoded html entities",
     input: `
-        import { Trans } from "@lingui/macro";
+        import { Trans } from "@translation/macro";
         <Trans>&amp;</Trans>
       `,
     expected: `
-        import { Trans } from "@lingui/react";
+        import { Trans } from "@translation/react";
         <Trans id="&" />;
       `,
   },

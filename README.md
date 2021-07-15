@@ -26,8 +26,8 @@ Lingui is an easy yet powerful internationalization framework for global project
 - **Clean and readable** - Keep your code clean and readable, while the library uses
   battle-tested and powerful **ICU MessageFormat** under the hood.
 
-- **Universal** - Use it everywhere. `@lingui/core` provides the essential intl
-  functionality which works in any JavaScript project while `@lingui/react` offers
+- **Universal** - Use it everywhere. `@translation/core` provides the essential intl
+  functionality which works in any JavaScript project while `@translation/react` offers
   components to leverage React rendering.
 
 - **Full rich-text support** - Use React components inside localized messages
@@ -73,7 +73,7 @@ If you're a react-intl user, checkout
 Short example how i18n looks with JSX:
 
 ```js
-import { Trans } from "@lingui/macro"
+import { Trans } from "@translation/macro"
 
 function App() {
   return (
@@ -180,6 +180,6 @@ The project is licensed under the [MIT][License] license.
 [Indiegogo]: https://igg.me/at/js-lingui/x/4367619
 [ocbackers-local]: #backers
 [ocsponsors-local]: #sponsors
-[BundleReact]: https://bundlephobia.com/result?p=@lingui/react
-[BundleCore]: https://bundlephobia.com/result?p=@lingui/core
+[BundleReact]: https://bundlephobia.com/result?p=@translation/react
+[BundleCore]: https://bundlephobia.com/result?p=@translation/core
 [Spectrum]: https://spectrum.chat/linguijs

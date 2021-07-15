@@ -62,7 +62,7 @@ low-level i18n API. Common usecase is translation of attributes:
 .. code-block:: jsx
 
    import * as React from 'react'
-   import { t, Trans } from '@lingui/macro'
+   import { t, Trans } from '@translation/macro'
 
    class HeaderLink extends React.PureComponent {
       render () {

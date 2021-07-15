@@ -1,5 +1,5 @@
 import React from "react"
-import { Trans, Plural } from "@lingui/macro"
+import { Trans, Plural } from "@translation/macro"
 
 export default function Lingui({ numUsers, name = "You" }) {
   return (

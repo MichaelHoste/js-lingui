@@ -14,8 +14,8 @@ Here is a working example with `react-testing-library`_, using the `wrapper-prop
    // index.js
     import React from 'react'
     import { getByText, render, act } from '@testing-library/react'
-    import { i18n } from '@lingui/core'
-    import { I18nProvider } from '@lingui/react'
+    import { i18n } from '@translation/core'
+    import { I18nProvider } from '@translation/react'
     import { en, cs } from 'make-plural/plurals'
 
     import { messages } from './locales/en/messages'

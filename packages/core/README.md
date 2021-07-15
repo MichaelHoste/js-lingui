@@ -2,17 +2,17 @@
 [![Version][badge-version]][package]
 [![Downloads][badge-downloads]][package]
 
-# @lingui/core
+# @translation/core
 
 > Internationalization API for JavaScript apps
 
-`@lingui/core` is part of [LinguiJS][linguijs]. See the [documentation][documentation] for all information, tutorials and examples.
+`@translation/core` is part of [LinguiJS][linguijs]. See the [documentation][documentation] for all information, tutorials and examples.
 
 ## Installation
 
 ```sh
-npm install --save @lingui/core
-# yarn add @lingui/core
+npm install --save @translation/core
+# yarn add @translation/core
 ```
 
 ## Usage
@@ -28,7 +28,7 @@ This package is licensed under [MIT][license] license.
 [documentation]: https://lingui.js.org/
 [tutorial]: https://lingui.js.org/tutorials/js.html
 [reference]: https://lingui.js.org/ref/core.html
-[package]: https://www.npmjs.com/package/@lingui/core
-[badge-downloads]: https://img.shields.io/npm/dw/@lingui/core.svg
-[badge-version]: https://img.shields.io/npm/v/@lingui/core.svg
-[badge-license]: https://img.shields.io/npm/l/@lingui/core.svg
+[package]: https://www.npmjs.com/package/@translation/core
+[badge-downloads]: https://img.shields.io/npm/dw/@translation/core.svg
+[badge-version]: https://img.shields.io/npm/v/@translation/core.svg
+[badge-license]: https://img.shields.io/npm/l/@translation/core.svg

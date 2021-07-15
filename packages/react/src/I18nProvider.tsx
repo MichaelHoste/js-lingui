@@ -1,5 +1,5 @@
 import React, { FunctionComponent, ComponentType, ReactNode } from "react"
-import { I18n } from "@lingui/core"
+import { I18n } from "@translation/core"
 
 export type I18nContext = {
   i18n: I18n
@@ -84,7 +84,7 @@ export const I18nProvider: FunctionComponent<I18nProviderProps> = ({
   /**
    * Subscribe for locale/message changes
    *
-   * I18n object from `@lingui/core` is the single source of truth for all i18n related
+   * I18n object from `@translation/core` is the single source of truth for all i18n related
    * data (active locale, catalogs). When new messages are loaded or locale is changed
    * we need to trigger re-rendering of LinguiContext.Consumers.
    *

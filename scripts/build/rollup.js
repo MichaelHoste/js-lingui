@@ -169,7 +169,7 @@ function getPlugins(
     // Record bundle size.
     sizes({
       getSize: (name, size, gzip) => {
-        const key = `@lingui/${name} (${bundleType})`
+        const key = `@translation/${name} (${bundleType})`
         Stats.currentBuildResults.bundleSizes[key] = {
           size,
           gzip,

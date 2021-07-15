@@ -1,7 +1,7 @@
 import Table from "cli-table"
 import chalk from "chalk"
 
-import { LinguiConfig } from "@lingui/conf"
+import { LinguiConfig } from "@translation/conf"
 
 import { CatalogType, AllCatalogsType } from "./catalog"
 

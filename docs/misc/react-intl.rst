@@ -75,7 +75,7 @@ However, let's go yet another level deeper.
 Macros for component-based message syntax
 =========================================
 
-`LinguiJS`_ provides macros ``@lingui/macro`` which automatically generates a message
+`LinguiJS`_ provides macros ``@translation/macro`` which automatically generates a message
 syntax.
 
 Let's go back to the previous example:

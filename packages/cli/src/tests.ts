@@ -2,7 +2,7 @@ import os from "os"
 import fs from "fs-extra"
 import path from "path"
 
-import { mockConfig } from "@lingui/jest-mocks"
+import { mockConfig } from "@translation/jest-mocks"
 import { Catalog, MakeOptions, MakeTemplateOptions, MergeOptions , ExtractedMessageType, MessageType } from "./api/catalog"
 
 

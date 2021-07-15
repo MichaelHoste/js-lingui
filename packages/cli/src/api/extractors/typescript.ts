@@ -1,6 +1,6 @@
 import fs from "fs"
 import { transform } from "@babel/core"
-import linguiExtractMessages from "@lingui/babel-plugin-extract-messages"
+import linguiExtractMessages from "@translation/babel-plugin-extract-messages"
 
 import { projectType } from "../detect"
 import { ExtractorType, BabelOptions } from "."

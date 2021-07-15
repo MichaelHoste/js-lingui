@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`@lingui/babel-plugin-extract-messages should extract Plural messages from JSX files when there's no Trans tag (integration) 1`] = `
+exports[`@translation/babel-plugin-extract-messages should extract Plural messages from JSX files when there's no Trans tag (integration) 1`] = `
 Object {
   {count, plural, one {# book} other {# books}}: Object {
     extractedComments: Array [],
@@ -14,7 +14,7 @@ Object {
 }
 `;
 
-exports[`@lingui/babel-plugin-extract-messages should extract all messages from JS files (macros) 1`] = `
+exports[`@translation/babel-plugin-extract-messages should extract all messages from JS files (macros) 1`] = `
 Object {
   Description: Object {
     extractedComments: Array [
@@ -72,7 +72,7 @@ Object {
 }
 `;
 
-exports[`@lingui/babel-plugin-extract-messages should extract all messages from JS files 1`] = `
+exports[`@translation/babel-plugin-extract-messages should extract all messages from JS files 1`] = `
 Object {
   Description: Object {
     extractedComments: Array [
@@ -116,7 +116,7 @@ Object {
 }
 `;
 
-exports[`@lingui/babel-plugin-extract-messages should extract all messages from JSX files (macros) 1`] = `
+exports[`@translation/babel-plugin-extract-messages should extract all messages from JSX files (macros) 1`] = `
 Object {
   Hi, my name is {name}: Object {
     extractedComments: Array [],
@@ -148,7 +148,7 @@ Object {
 }
 `;
 
-exports[`@lingui/babel-plugin-extract-messages should extract all messages from JSX files 1`] = `
+exports[`@translation/babel-plugin-extract-messages should extract all messages from JSX files 1`] = `
 Object {
   Hi, my name is <0>{name}</0>: Object {
     extractedComments: Array [],

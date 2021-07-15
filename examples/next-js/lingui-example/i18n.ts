@@ -1,4 +1,4 @@
-import { i18n } from "@lingui/core"
+import { i18n } from "@translation/core"
 import { en, cs } from "make-plural/plurals"
 
 i18n.loadLocaleData("en", { plurals: en })

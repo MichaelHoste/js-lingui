@@ -2,11 +2,11 @@ export default [
   {
     name: "Macro is used in expression assignment",
     input: `
-        import { t } from '@lingui/macro';
+        import { t } from '@translation/macro';
         const a = t\`Expression assignment\`;
     `,
     expected: `
-        import { i18n } from "@lingui/core";
+        import { i18n } from "@translation/core";
         const a =
           /*i18n*/
           i18n._("Expression assignment")
@@ -15,11 +15,11 @@ export default [
   {
     name: "Variables are replaced with named arguments",
     input: `
-        import { t } from '@lingui/macro';
+        import { t } from '@translation/macro';
         t\`Variable \${name}\`;
     `,
     expected: `
-        import { i18n } from "@lingui/core";
+        import { i18n } from "@translation/core";
         /*i18n*/
         i18n._("Variable {name}", {
           name: name
@@ -29,11 +29,11 @@ export default [
   {
     name: "Variables with scaped template literals are correctly formatted",
     input: `
-        import { t } from '@lingui/macro';
+        import { t } from '@translation/macro';
         t\`Variable \\\`\${name}\\\`\`;
     `,
     expected: `
-        import { i18n } from "@lingui/core";
+        import { i18n } from "@translation/core";
         /*i18n*/
         i18n._("Variable \`{name}\`", {
           name: name
@@ -43,11 +43,11 @@ export default [
   {
     name: "Variables with scaped double quotes are correctly formatted",
     input: `
-        import { t } from '@lingui/macro';
+        import { t } from '@translation/macro';
         t\`Variable \"name\" \`;
     `,
     expected: `
-        import { i18n } from "@lingui/core";
+        import { i18n } from "@translation/core";
         /*i18n*/
         i18n._("Variable \\"name\\"")
     `,
@@ -55,11 +55,11 @@ export default [
   {
     name: "Variables should be deduplicated",
     input: `
-        import { t } from '@lingui/macro';
+        import { t } from '@translation/macro';
         t\`\${duplicate} variable \${duplicate}\`;
     `,
     expected: `
-        import { i18n } from "@lingui/core";
+        import { i18n } from "@translation/core";
         /*i18n*/
         i18n._("{duplicate} variable {duplicate}", {
           duplicate: duplicate
@@ -70,7 +70,7 @@ export default [
     name:
       "Anything variables except simple identifiers are used as positional arguments",
     input: `
-        import { t } from '@lingui/macro';
+        import { t } from '@translation/macro';
         t\`
           Property \${props.name},\\
           function \${random()},\\
@@ -81,7 +81,7 @@ export default [
         \`
     `,
     expected: `
-        import { i18n } from "@lingui/core";
+        import { i18n } from "@translation/core";
         /*i18n*/
         i18n._(
           "Property {0}, function {1}, array {2}, constant {3}, object {4} anything {5}", {
@@ -98,12 +98,12 @@ export default [
   {
     name: "Newlines are preserved",
     input: `
-        import { t } from '@lingui/macro';
+        import { t } from '@translation/macro';
         t\`Multiline
           string\`
       `,
     expected: `
-        import { i18n } from "@lingui/core";
+        import { i18n } from "@translation/core";
         /*i18n*/
         i18n._("Multiline\\nstring")
       `,
@@ -111,10 +111,10 @@ export default [
   {
     name: "Support template strings in t macro message",
     input: `
-        import { t } from '@lingui/macro'
+        import { t } from '@translation/macro'
         const msg = t({ message: \`Hello \${name}\` })
       `,
-    expected: `import { i18n } from "@lingui/core";
+    expected: `import { i18n } from "@translation/core";
     const msg =
       i18n._(/*i18n*/
         {
@@ -128,10 +128,10 @@ export default [
   {
     name: "Support id and comment in t macro as callExpression",
     input: `
-        import { t } from '@lingui/macro'
+        import { t } from '@translation/macro'
         const msg = t({ id: 'msgId', comment: 'description for translators', message: plural(val, { one: '...', other: '...' }) })
       `,
-    expected: `import { i18n } from "@lingui/core";
+    expected: `import { i18n } from "@translation/core";
     const msg =
       i18n._(/*i18n*/
         {
@@ -147,10 +147,10 @@ export default [
   {
     name: "Support id with message interpolation",
     input: `
-        import { t } from '@lingui/macro'
+        import { t } from '@translation/macro'
         const msg = t({ id: 'msgId', message: \`Some \${value}\` })
       `,
-    expected: `import { i18n } from "@lingui/core";
+    expected: `import { i18n } from "@translation/core";
     const msg =
       i18n._(/*i18n*/
         {

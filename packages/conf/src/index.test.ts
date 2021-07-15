@@ -6,10 +6,10 @@ import {
   replaceRootDir,
   catalogMigration,
   configValidation,
-} from "@lingui/conf"
-import { mockConsole, getConsoleMockCalls } from "@lingui/jest-mocks"
+} from "@translation/conf"
+import { mockConsole, getConsoleMockCalls } from "@translation/jest-mocks"
 
-describe("@lingui/conf", function () {
+describe("@translation/conf", function () {
   it("should return default config", function () {
     expect.assertions(2)
 

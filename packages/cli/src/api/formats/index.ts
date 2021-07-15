@@ -1,4 +1,4 @@
-import { CatalogFormat, CatalogFormatOptions } from "@lingui/conf"
+import { CatalogFormat, CatalogFormatOptions } from "@translation/conf"
 
 import { CatalogType } from "../catalog"
 import csv from "./csv"

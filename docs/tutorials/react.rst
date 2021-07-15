@@ -71,7 +71,7 @@ We will directly start translating the ``Inbox`` component, but we need
 to complete one more step to setup our application.
 
 Components needs to read information about current language and message catalogs from ``i18n`` instance. 
-Initially, you can use the one created and exported from ``@lingui/core`` and later you can replace with
+Initially, you can use the one created and exported from ``@translation/core`` and later you can replace with
 your one if such need arise.
 
 In order to pass ``i18n`` around the I18nProvider wraps around React Context.
@@ -84,8 +84,8 @@ Let's add all required imports and wrap our app inside :component:`I18nProvider`
    import React from 'react'
    import { render } from 'react-dom'
 
-   import { i18n } from '@lingui/core'
-   import { I18nProvider } from '@lingui/react'
+   import { i18n } from '@translation/core'
+   import { I18nProvider } from '@translation/react'
    import { messages } from './locales/en/messages.js'
    import Inbox from './Inbox.js'
 
@@ -133,7 +133,7 @@ macro:
 
 .. code-block:: jsx
 
-   import { Trans } from '@lingui/macro';
+   import { Trans } from '@translation/macro';
    
    <h1><Trans>Message Inbox</Trans></h1>
 
@@ -151,7 +151,7 @@ Take a look at this short example. This is what we write:
 
 .. code-block:: jsx
 
-   import { Trans } from '@lingui/macro'
+   import { Trans } from '@translation/macro'
 
    <Trans>Hello {name}</Trans>
 
@@ -159,7 +159,7 @@ And this is how the code is transformed:
 
 .. code-block:: jsx
 
-   import { Trans } from '@lingui/react'
+   import { Trans } from '@translation/react'
 
    <Trans id="Hello {name}" values={{ name }} />
 
@@ -265,8 +265,8 @@ Let's load this file into our app and set active language to ``cs``:
    import { render } from 'react-dom'
    import Inbox from './Inbox.js'
 
-   import { I18nProvider } from '@lingui/react'
-   import { i18n } from '@lingui/core'
+   import { I18nProvider } from '@translation/react'
+   import { i18n } from '@translation/core'
 
    import catalogCs from './locales/cs.js'
    i18n.load('cs', catalogCs.messages)
@@ -700,8 +700,8 @@ After all modifications, the final component with i18n looks like this:
 
    // Inbox.js
    import React from 'react'
-   import { Trans, Plural } from '@lingui/macro'
-   import { useLingui } from '@lingui/react'
+   import { Trans, Plural } from '@translation/macro'
+   import { useLingui } from '@translation/react'
 
    const Inbox = ({ messages, markAsRead, user }) => {
      const { i18n } = useLingui()
@@ -741,6 +741,6 @@ Further reading
 ===============
 
 - `Common i18n patterns in React <./react-patterns.html>`_
-- `@lingui/react reference documentation <../ref/react.html>`_
-- `@lingui/cli reference documentation <../ref/cli.html>`_
+- `@translation/react reference documentation <../ref/react.html>`_
+- `@translation/cli reference documentation <../ref/cli.html>`_
 - `Pluralization Guide <../guides/plurals.html>`_

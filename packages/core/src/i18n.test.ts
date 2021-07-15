@@ -1,5 +1,5 @@
-import { setupI18n } from "@lingui/core"
-import { mockConsole, mockEnv } from "@lingui/jest-mocks"
+import { setupI18n } from "@translation/core"
+import { mockConsole, mockEnv } from "@translation/jest-mocks"
 
 describe("I18n", function () {
   describe("I18n.load", () => {
@@ -109,7 +109,7 @@ describe("I18n", function () {
       mockEnv("production", () => {
         jest.resetModules()
         mockConsole((console) => {
-          const { setupI18n } = require("@lingui/core")
+          const { setupI18n } = require("@translation/core")
           const i18n = setupI18n()
           i18n.activate("xyz")
           expect(console.warn).not.toBeCalled()
@@ -184,7 +184,7 @@ describe("I18n", function () {
     }
 
     mockEnv("production", () => {
-      const { setupI18n } = require("@lingui/core")
+      const { setupI18n } = require("@translation/core")
       const i18n = setupI18n({
         locale: "fr",
         messages: { fr: messages },

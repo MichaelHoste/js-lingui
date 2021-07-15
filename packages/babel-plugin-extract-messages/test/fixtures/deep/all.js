@@ -1,4 +1,4 @@
-import { Trans } from "@lingui/react"
+import { Trans } from "@translation/react"
 
 ;<span id="ignore" />
 ;<Trans id="msg.hello" />

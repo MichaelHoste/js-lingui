@@ -2,17 +2,17 @@
 [![Version][badge-version]][package]
 [![Downloads][badge-downloads]][package]
 
-# @lingui/react
+# @translation/react
 
 > React components for internationalization
 
-`@lingui/react` is part of [LinguiJS][linguijs]. See the [documentation][documentation] for all information, tutorials and examples.
+`@translation/react` is part of [LinguiJS][linguijs]. See the [documentation][documentation] for all information, tutorials and examples.
 
 ## Installation
 
 ```sh
-npm install --save @lingui/react
-# yarn add @lingui/react
+npm install --save @translation/react
+# yarn add @translation/react
 ```
 
 ## Usage
@@ -28,7 +28,7 @@ See the [tutorial][tutorial] or [reference][reference] documenation.
 [documentation]: https://lingui.js.org/
 [tutorial]: https://lingui.js.org/tutorials/react.html
 [reference]: https://lingui.js.org/ref/react.html
-[package]: https://www.npmjs.com/package/@lingui/react
-[badge-downloads]: https://img.shields.io/npm/dw/@lingui/react.svg
-[badge-version]: https://img.shields.io/npm/v/@lingui/react.svg
-[badge-license]: https://img.shields.io/npm/l/@lingui/react.svg
+[package]: https://www.npmjs.com/package/@translation/react
+[badge-downloads]: https://img.shields.io/npm/dw/@translation/react.svg
+[badge-version]: https://img.shields.io/npm/v/@translation/react.svg
+[badge-license]: https://img.shields.io/npm/l/@translation/react.svg

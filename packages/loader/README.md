@@ -2,18 +2,18 @@
 [![Version][badge-version]][package]
 [![Downloads][badge-downloads]][package]
 
-# @lingui/loader
+# @translation/loader
 
 > webpack loader for compiling message catalog on the fly
 
-`@lingui/loader` is part of [LinguiJS][linguijs]. See the
+`@translation/loader` is part of [LinguiJS][linguijs]. See the
 [documentation][documentation] for all information, tutorials and examples.
 
 ## Installation
 
 ```sh
-npm install --save-dev @lingui/loader
-# yarn add --dev @lingui/loader
+npm install --save-dev @translation/loader
+# yarn add --dev @translation/loader
 ```
 
 ## Usage
@@ -28,7 +28,7 @@ This package is licensed under [MIT][license] license.
 [linguijs]: https://github.com/lingui/js-lingui
 [documentation]: https://lingui.js.org/
 [reference]: https://lingui.js.org/ref/loader.html
-[package]: https://www.npmjs.com/package/@lingui/loader
-[badge-downloads]: https://img.shields.io/npm/dw/@lingui/loader.svg
-[badge-version]: https://img.shields.io/npm/v/@lingui/loader.svg
-[badge-license]: https://img.shields.io/npm/l/@lingui/loader.svg
+[package]: https://www.npmjs.com/package/@translation/loader
+[badge-downloads]: https://img.shields.io/npm/dw/@translation/loader.svg
+[badge-version]: https://img.shields.io/npm/v/@translation/loader.svg
+[badge-license]: https://img.shields.io/npm/l/@translation/loader.svg

@@ -1,5 +1,5 @@
 {
-  "name": "@lingui/detect-locale",
+  "name": "@translation/detect-locale",
   "version": "3.8.2",
   "description": "@Lingui package to help you find the correct browser/server locale",
   "main": "index.js",

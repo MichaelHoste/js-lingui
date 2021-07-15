@@ -5,7 +5,7 @@ import * as R from "ramda"
 import program from "commander"
 import * as plurals from "make-plural"
 
-import { getConfig, LinguiConfig } from "@lingui/conf"
+import { getConfig, LinguiConfig } from "@translation/conf"
 
 import { getCatalogs } from "./api/catalog"
 import { createCompiledCatalog } from "./api/compile"
@@ -104,7 +104,7 @@ function command(config: LinguiConfig, options) {
           const typescriptPath = compiledPath.replace(/\.ts?$/, "") + ".d.ts"
           fs.writeFileSync(
             typescriptPath,
-            `import { Messages } from '@lingui/core';
+            `import { Messages } from '@translation/core';
           declare const messages: Messages;
           export { messages };
           `
@@ -152,7 +152,7 @@ if (require.main === module) {
 
   if (program.format) {
     const msg =
-      "--format option is deprecated and will be removed in @lingui/cli@3.0.0." +
+      "--format option is deprecated and will be removed in @translation/cli@3.0.0." +
       " Please set format in configuration https://lingui.js.org/ref/conf.html#format"
     console.warn(msg)
     config.format = program.format

@@ -4,7 +4,7 @@ msgstr ""
 "Mime-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: @lingui/cli\n"
+"X-Generator: @translation/cli\n"
 "Language: en\n"
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
@@ -15,7 +15,7 @@ msgstr ""
 
 #. Title of example
 #: src/messages.js:32
-msgid "@lingui/core example"
+msgid "@translation/core example"
 msgstr ""
 
 #: src/messages.js:63
@@ -61,7 +61,7 @@ msgstr "There are {value, plural, one {# bottle} other {# bottles}} hanging on t
 #. Title of example
 #: src/ids.js:28
 msgid "static"
-msgstr "@lingui/core example"
+msgstr "@translation/core example"
 
 #: src/ids.js:25
 #~ msgid "undefined"

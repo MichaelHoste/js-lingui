@@ -1,7 +1,7 @@
 export default [
   {
     input: `
-        import { Plural } from '@lingui/macro';
+        import { Plural } from '@translation/macro';
         <Plural
           value={count}
           offset="1"
@@ -11,7 +11,7 @@ export default [
         />;
       `,
     expected: `
-        import { Trans } from "@lingui/react";
+        import { Trans } from "@translation/react";
         <Trans id="{count, plural, offset:1 =0 {Zero items} few {{count} items} other {<0>A lot of them</0>}}" values={{
           count: count
         }} components={{
@@ -21,7 +21,7 @@ export default [
   },
   {
     input: `
-        import { Trans, Plural } from '@lingui/macro';
+        import { Trans, Plural } from '@translation/macro';
         <Plural
           value={count}
           one={
@@ -37,7 +37,7 @@ export default [
         />;
       `,
     expected: `
-        import { Trans } from "@lingui/react";
+        import { Trans } from "@translation/react";
         <Trans id="{count, plural, one {<0>#</0> slot added} other {<1>#</1> slots added}}" values={{
           count: count
         }} components={{
@@ -48,7 +48,7 @@ export default [
   },
   {
     input: `
-        import { Plural } from '@lingui/macro';
+        import { Plural } from '@translation/macro';
         <Plural
           id="msg.plural"
           render="strong"
@@ -60,7 +60,7 @@ export default [
         />;
       `,
     expected: `
-        import { Trans } from "@lingui/react";
+        import { Trans } from "@translation/react";
         <Trans render="strong" id="msg.plural" message="{count, plural, offset:1 =0 {Zero items} few {{count} items} other {<0>A lot of them</0>}}" values={{
           count: count
         }} components={{
@@ -70,7 +70,7 @@ export default [
   },
   {
     input: `
-        import { Trans, Plural } from '@lingui/macro';
+        import { Trans, Plural } from '@translation/macro';
         <Trans id="inner-id-removed">
           Looking for{" "}
           <Plural
@@ -83,7 +83,7 @@ export default [
         </Trans>
       `,
     expected: `
-        import { Trans } from "@lingui/react";
+        import { Trans } from "@translation/react";
         <Trans id="inner-id-removed" message="Looking for {0, plural, offset:1 =0 {zero items} few {{1} items {2}} other {<0>a lot of them</0>}}" values={{
           0: items.length,
           1: items.length,

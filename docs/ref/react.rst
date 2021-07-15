@@ -1,10 +1,10 @@
 .. _ref-react:
 
 *************************************
-API Reference - React (@lingui/react)
+API Reference - React (@translation/react)
 *************************************
 
-Components from ``@lingui/react`` wrap the vanilla JS API from ``lingui-i18n``.
+Components from ``@translation/react`` wrap the vanilla JS API from ``lingui-i18n``.
 React components handle changes of active language or interpolated variables
 better than low-level API and also take care of re-rendering when wrapped inside
 pure components.
@@ -107,10 +107,10 @@ Trans
 
    .. code-block:: jsx
 
-      import { Trans } from "@lingui/macro"
+      import { Trans } from "@translation/macro"
 
-      // Trans from @lingui/react won't work in this case
-      // import { Trans } from "@lingui/react"
+      // Trans from @translation/react won't work in this case
+      // import { Trans } from "@translation/react"
 
       <Trans>Hello, my name is {name}</Trans>
 
@@ -136,12 +136,12 @@ are arguments and components used for formatting translation:
 Plurals
 ^^^^^^^
 
-If you cannot use `@lingui/macro` for some reason(maybe you compile your code using just TS instead of babel), you can render plurals using the plain Trans component like this:
+If you cannot use `@translation/macro` for some reason(maybe you compile your code using just TS instead of babel), you can render plurals using the plain Trans component like this:
 
 .. code-block:: jsx
 
    import React from 'react';
-   import { Trans } from '@lingui/react';
+   import { Trans } from '@translation/react';
    
    <Trans
       id="{count, plural, =1 {car} other {cars}}"
@@ -161,7 +161,7 @@ I18nProvider
 
 .. component:: I18nProvider
 
-   :prop I18n i18n: The i18n instance (usually the one imported from ``@lingui/core``)
+   :prop I18n i18n: The i18n instance (usually the one imported from ``@translation/core``)
    :prop React.ReactNode children: React Children node
    :prop React.ComponentType defaultComponent: A React component for rendering <Trans> within this component (Not required)
    :prop boolean forceRenderOnLocaleChange: Force re-render when locale changes (default: true)
@@ -187,8 +187,8 @@ top-level application component. However, if the ``locale`` is stored in a
 .. code-block:: jsx
 
    import React from 'react';
-   import { I18nProvider } from '@lingui/react';
-   import { i18n } from '@lingui/core';
+   import { I18nProvider } from '@translation/react';
+   import { i18n } from '@translation/core';
    import { messages as messagesEn } from './locales/en/messages.js';
 
    i18n.load({
@@ -212,7 +212,7 @@ useLingui
 .. code-block:: jsx
 
    import React from "react"
-   import { useLingui } from "@lingui/react"
+   import { useLingui } from "@translation/react"
 
    const CurrentLocale = () => {
       const { i18n } = useLingui()
@@ -231,7 +231,7 @@ wrapped component. ``i18n`` object is needed when you have to access the i18n da
 .. code-block:: jsx
 
    import React from "react"
-   import { withI18n } from "@lingui/react"
+   import { withI18n } from "@translation/react"
 
    const CurrentLocale = withI18n()(({ i18n }) => (
       <span>Current locale: {i18n.locale}

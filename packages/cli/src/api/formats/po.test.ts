@@ -3,7 +3,7 @@ import path from "path"
 import mockFs from "mock-fs"
 import mockDate from "mockdate"
 import PO from "pofile"
-import { mockConsole } from "@lingui/jest-mocks"
+import { mockConsole } from "@translation/jest-mocks"
 import { format as formatDate } from "date-fns"
 
 import format from "./po"
@@ -249,7 +249,7 @@ describe("pofile format", () => {
       "Mime-Version: 1.0\\n"
       "Content-Type: text/plain; charset=utf-8\\n"
       "Content-Transfer-Encoding: 8bit\\n"
-      "X-Generator: @lingui/cli\\n"
+      "X-Generator: @translation/cli\\n"
       "Language: en\\n"
 
       msgid "static"

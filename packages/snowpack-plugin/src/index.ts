@@ -1,6 +1,6 @@
 import path from "path"
-import { getConfig } from "@lingui/conf"
-import { createCompiledCatalog, getCatalogs, getCatalogForFile } from "@lingui/cli/api"
+import { getConfig } from "@translation/conf"
+import { createCompiledCatalog, getCatalogs, getCatalogForFile } from "@translation/cli/api"
 
 type LinguiConfigOpts = {
   cwd?: string;
@@ -15,7 +15,7 @@ function extractLinguiMessages(snowpackConfig?, linguiConfig: LinguiConfigOpts =
   const config = getConfig(linguiConfig)
 
   return {
-    name: '@lingui/snowpack-plugin',
+    name: '@translation/snowpack-plugin',
     resolve: {
       input: ['.po', '.json'],
       output: ['.js'],
@@ -31,7 +31,7 @@ function extractLinguiMessages(snowpackConfig?, linguiConfig: LinguiConfigOpts =
           po: ".po",
           lingui: ".json"
         }
-        throw new Error(`@lingui/snowpack-plugin: File extension is mandatory, for ex: import('./locales/en/messages${formats[config.format]}')`)
+        throw new Error(`@translation/snowpack-plugin: File extension is mandatory, for ex: import('./locales/en/messages${formats[config.format]}')`)
       }
 
       const fileCatalog = getCatalogForFile(

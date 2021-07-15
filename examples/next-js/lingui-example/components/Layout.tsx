@@ -1,7 +1,7 @@
 import Head from "next/head"
 import classnames from "classnames"
 
-import { t, Trans } from "@lingui/macro"
+import { t, Trans } from "@translation/macro"
 
 import { activate } from "lingui-example/i18n"
 import styles from "./Layout.module.css"

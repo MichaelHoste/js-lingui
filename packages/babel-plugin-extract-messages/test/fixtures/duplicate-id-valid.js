@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Trans } from "@lingui/react"
+import { Trans } from "@translation/react"
 
 // OK - Default message is missing
 /*i18n*/i18n._("msg")

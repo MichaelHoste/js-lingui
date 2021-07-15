@@ -1,7 +1,7 @@
 export default [
   {
     input: `
-        import { Select } from '@lingui/macro';
+        import { Select } from '@translation/macro';
         <Select
           value={count}
           _male="He"
@@ -10,7 +10,7 @@ export default [
         />;
       `,
     expected: `
-        import { Trans } from "@lingui/react";
+        import { Trans } from "@translation/react";
         <Trans id="{count, select, male {He} female {She} other {<0>Other</0>}}" values={{
           count: count
         }} components={{
@@ -20,7 +20,7 @@ export default [
   },
   {
     input: `
-        import { Select } from '@lingui/macro';
+        import { Select } from '@translation/macro';
         <Select
           id="msg.select"
           render="strong"
@@ -31,7 +31,7 @@ export default [
         />;
       `,
     expected: `
-        import { Trans } from "@lingui/react";
+        import { Trans } from "@translation/react";
         <Trans render="strong" id="msg.select" message="{0, select, male {He} female {She} other {<0>Other</0>}}" values={{
           0: user.gender
         }} components={{

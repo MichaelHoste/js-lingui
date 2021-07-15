@@ -26,10 +26,10 @@ packages
   .filter(name => !DEV_PACKAGES.includes(name))
   .forEach(name => {
     // Root entry point
-    moduleNameMapper[`^@lingui/${name}$`] = `<rootDir>/packages/${name}/build`
+    moduleNameMapper[`^@translation/${name}$`] = `<rootDir>/packages/${name}/build`
     // Named entry points
     moduleNameMapper[
-      `^@lingui/${name}/(.*)$`
+      `^@translation/${name}/(.*)$`
     ] = `<rootDir>/packages/${name}/build/$1`
   })
 
