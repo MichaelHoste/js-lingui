@@ -1,6 +1,6 @@
 {
   "name": "@translation/core",
-  "version": "3.9.4",
+  "version": "3.9.5",
   "description": "I18n tools for javascript",
   "main": "index.js",
   "module": "esm/index.js",
@@ -47,5 +47,5 @@
     "make-plural": "^6.2.2",
     "messageformat-parser": "^4.1.3"
   },
-  "gitHead": "22e30e3191b95281049804869fc58e58b9c9afe7"
+  "gitHead": "a8724a5bce9f7f0873f5144eedc835c79613a271"
 }

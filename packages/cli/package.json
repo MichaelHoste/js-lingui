@@ -1,6 +1,6 @@
 {
   "name": "@translation/cli",
-  "version": "3.9.4",
+  "version": "3.9.5",
   "description": "CLI for working wit message catalogs",
   "keywords": [
     "cli",
@@ -39,8 +39,8 @@
     "@babel/plugin-syntax-jsx": "^7.10.4",
     "@babel/runtime": "^7.11.2",
     "@babel/types": "^7.11.5",
-    "@translation/babel-plugin-extract-messages": "^3.9.4",
-    "@translation/conf": "^3.9.4",
+    "@translation/babel-plugin-extract-messages": "^3.9.5",
+    "@translation/conf": "^3.9.5",
     "babel-plugin-macros": "^2.8.0",
     "bcp-47": "^1.0.7",
     "chalk": "^4.1.0",
@@ -79,5 +79,5 @@
     "babel-plugin-macros": "^2.4.2",
     "typescript": "2 || 3 || 4"
   },
-  "gitHead": "22e30e3191b95281049804869fc58e58b9c9afe7"
+  "gitHead": "a8724a5bce9f7f0873f5144eedc835c79613a271"
 }

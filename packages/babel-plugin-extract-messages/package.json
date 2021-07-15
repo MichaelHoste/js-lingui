@@ -1,6 +1,6 @@
 {
   "name": "@translation/babel-plugin-extract-messages",
-  "version": "3.9.4",
+  "version": "3.9.5",
   "description": "Babel plugin for collecting messages from source code for internationalization",
   "main": "index.js",
   "author": {
@@ -30,8 +30,8 @@
   "dependencies": {
     "@babel/generator": "^7.11.6",
     "@babel/runtime": "^7.11.2",
-    "@translation/conf": "^3.9.4",
+    "@translation/conf": "^3.9.5",
     "mkdirp": "^1.0.4"
   },
-  "gitHead": "22e30e3191b95281049804869fc58e58b9c9afe7"
+  "gitHead": "a8724a5bce9f7f0873f5144eedc835c79613a271"
 }

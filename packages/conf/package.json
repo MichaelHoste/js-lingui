@@ -1,6 +1,6 @@
 {
   "name": "@translation/conf",
-  "version": "3.9.4",
+  "version": "3.9.5",
   "description": "Get lingui configuration from package.json",
   "keywords": [
     "lingui",
@@ -31,5 +31,5 @@
     "index.js",
     "index.d.ts"
   ],
-  "gitHead": "22e30e3191b95281049804869fc58e58b9c9afe7"
+  "gitHead": "a8724a5bce9f7f0873f5144eedc835c79613a271"
 }
