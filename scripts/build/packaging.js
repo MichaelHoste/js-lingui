@@ -18,7 +18,7 @@ function getPackageName(name) {
 
 function getBundleOutputPaths(bundleType, filename, packageName) {
   const name = getPackageName(packageName)
-  const _filename = filename.replace(/^@lingui\//, "")
+  const _filename = filename.replace(/^@translation\//, "")
 
   switch (bundleType) {
     case NOOP:

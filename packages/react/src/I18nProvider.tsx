@@ -1,5 +1,5 @@
 import React, { FunctionComponent, ComponentType, ReactNode } from "react"
-import { I18n } from "@lingui/core"
+import { I18n } from "@translation/core"
 
 export type I18nContext = {
   i18n: I18n
